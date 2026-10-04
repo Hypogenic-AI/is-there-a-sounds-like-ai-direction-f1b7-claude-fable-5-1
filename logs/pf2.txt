@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "total": 1,
+  "papers": [
+    {
+      "title": "Adversarial Paraphrasing: A Universal Attack for Humanizing AI-Generated Text",
+      "year": 2025,
+      "authors": "Yize Cheng, Vinu Sankar Sadasivan, Mehrdad Saberi, Shoumik Saha, S. Feizi",
+      "url": "https://api.semanticscholar.org/CorpusId:279250318",
+      "relevance": 1,
+      "abstract": "The increasing capabilities of Large Language Models (LLMs) have raised concerns about their misuse in AI-generated plagiarism and social engineering. While various AI-generated text detectors have been proposed to mitigate these risks, many remain vulnerable to simple evasion techniques such as paraphrasing. However, recent detectors have shown greater robustness against such basic attacks. In this work, we introduce Adversarial Paraphrasing, a training-free attack framework that universally humanizes any AI-generated text to evade detection more effectively. Our approach leverages an off-the-shelf instruction-following LLM to paraphrase AI-generated content under the guidance of an AI text detector, producing adversarial examples that are specifically optimized to bypass detection. Extensive experiments show that our attack is both broadly effective and highly transferable across several detection systems. For instance, compared to simple paraphrasing attack--which, ironically, increases the true positive at 1% false positive (T@1%F) by 8.57% on RADAR and 15.03% on Fast-DetectGPT--adversarial paraphrasing, guided by OpenAI-RoBERTa-Large, reduces T@1%F by 64.49% on RADAR and a striking 98.96% on Fast-DetectGPT. Across a diverse set of detectors--including neural network-based, watermark-based, and zero-shot approaches--our attack achieves an average T@1%F reduction of 87.88% under the guidance of OpenAI-RoBERTa-Large. We also analyze the tradeoff between text quality and attack success to find that our method can significantly reduce detection rates, with mostly a slight degradation in text quality. Our adversarial setup highlights the need for more robust and resilient detection strategies in the light of increasingly sophisticated evasion techniques.",
+      "citations": 28
+    }
+  ]
+}
+
+Results saved to: paper_search_results/steering_vectors_to_make_LLM_output_evade_AI-generated_text_detectors_20261004_183101.jsonl

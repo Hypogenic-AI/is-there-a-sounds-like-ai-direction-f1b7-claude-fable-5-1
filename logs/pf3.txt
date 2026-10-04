@@ -1,0 +1,305 @@
+{
+  "success": true,
+  "total": 33,
+  "papers": [
+    {
+      "title": "The Assistant Axis: Situating and Stabilizing the Default Persona of Language Models",
+      "year": 2026,
+      "authors": "Christina Lu, Jack Gallagher, Jonathan Michala, Kyle Fish, Jack W Lindsey",
+      "url": "https://www.semanticscholar.org/paper/3f8ab54565559943a18316fd21e2f485139ca68c",
+      "relevance": 3,
+      "abstract": "Large language models can represent a variety of personas but typically default to a helpful Assistant identity cultivated during post-training. We investigate the structure of the space of model personas by extracting activation directions corresponding to diverse character archetypes. Across several different models, we find that the leading component of this persona space is an\"Assistant Axis,\"which captures the extent to which a model is operating in its default Assistant mode. Steering towards the Assistant direction reinforces helpful and harmless behavior; steering away increases the model's tendency to identify as other entities. Moreover, steering away with more extreme values often induces a mystical, theatrical speaking style. We find this axis is also present in pre-trained models, where it primarily promotes helpful human archetypes like consultants and coaches and inhibits spiritual ones. Measuring deviations along the Assistant Axis predicts\"persona drift,\"a phenomenon where models slip into exhibiting harmful or bizarre behaviors that are uncharacteristic of their typical persona. We find that persona drift is often driven by conversations demanding meta-reflection on the model's processes or featuring emotionally vulnerable users. We show that restricting activations to a fixed region along the Assistant Axis can stabilize model behavior in these scenarios -- and also in the face of adversarial persona-based jailbreaks. Our results suggest that post-training steers models toward a particular region of persona space but only loosely tethers them to it, motivating work on training and steering strategies that more deeply anchor models to a coherent persona.",
+      "citations": 93
+    },
+    {
+      "title": "Where is the Mind? Persona Vectors and LLM Individuation",
+      "year": 2026,
+      "authors": "P. Beckmann, Patrick Butlin",
+      "url": "https://api.semanticscholar.org/CorpusId:287635493",
+      "relevance": 3,
+      "abstract": "The individuation problem for large language models asks which entities associated with them, if any, should be identified as minds. We approach this problem through mechanistic interpretability, engaging in particular with recent empirical work on persona vectors, persona space, and emergent misalignment. We argue that three views are the strongest candidates: the virtual instance view and two new views we introduce, the (virtual) instance-persona view and the model-persona view. First, we argue for the virtual instance view on the grounds that attention streams sustain quasi-psychological connections across token-time. Then we present the persona literature, organised around three hypotheses about the internal structure underlying personas in LLMs, and show that the two persona-based views are promising alternatives.",
+      "citations": 8
+    },
+    {
+      "title": "\"Many Are My Names\": The Anatomy of the Assistant and Its Personas via Sparse Autoencoders",
+      "year": 2026,
+      "authors": "Adelaide Danilov, A. Nourbakhsh, Oleksandr Marchenko Breneur, Salima Lamsiyah",
+      "url": "https://api.semanticscholar.org/CorpusId:290984469",
+      "relevance": 3,
+      "abstract": "How a language model internally represents who is speaking, the Assistant, an assigned roleplay persona, or a narrated story character, remains underexplored. We study speaker representations using a dataset of user-expressed emotional text and corresponding model responses. We decompose three generation settings (Assistant, Roleplay, and Story) into sparse autoencoder features extracted at turn-boundary and pronoun-token positions and selected through a filtering pipeline for different depths. We characterize each surviving feature through its steering effects and activation distribution. Our main finding is that the Assistant and roleplay personas are not independent alternatives: personas retain the Assistant-associated feature core while progressively differentiating from it across layers, starting from operational machinery towards behavioral and stylistic features. Meanwhile, generated story characters lack the Assistant-associated core. Both Story and Roleplay can be distinguished from the Assistant with Immersive Simulation Mode. However, the Assistant can sometimes enter or slowly drift into it even in the default setting.",
+      "citations": 0
+    },
+    {
+      "title": "Persona Non Grata: Single-Method Safety Evaluation Is Incomplete for Persona-Imbued LLMs",
+      "year": 2026,
+      "authors": "Wenkai Li, Fan Yang, Shaunak A. Mehta, K. Onoue",
+      "url": "https://api.semanticscholar.org/CorpusId:287433091",
+      "relevance": 3,
+      "abstract": "Personality imbuing customizes LLM behavior, but safety evaluations almost always study prompt-based personas alone. We show this is incomplete: prompting and activation steering expose *different*, architecture-dependent vulnerability profiles, and testing with only one method can miss a model's dominant failure mode. Across 5,568 judged conditions on four standard models from three architecture families, persona danger rankings under system prompting are preserved across all architectures ($\\rho = 0.71$--$0.96$), but activation-steering vulnerability diverges sharply and cannot be predicted from prompt-side rankings: Llama-3.1-8B is substantially more AS-vulnerable, whereas Gemma-3-27B and Qwen3.5 are more vulnerable to prompting. The most striking illustration of this divergence is the *prosocial persona paradox*: on Llama-3.1-8B, P12 (high conscientiousness + high agreeableness) is among the safest personas under prompting yet becomes the highest-ASR activation-steered persona (ASR ~0.818). This is an inversion robust to coefficient ablation and matched-strength calibration, and replicated on DeepSeek-R1-Distill-Qwen-32B. A trait refusal alignment framework, in which conscientiousness is strongly anti-aligned with refusal on Llama-3.1-8B, offers a partial geometric account. Reasoning provides only partial protection: two 32B reasoning models reach 15--18% prompt-side ASR, and activation steering separates them sharply in both baseline susceptibility and persona-specific vulnerability. Heuristic trace diagnostics suggest that the safer model retains stronger policy recall and self-correction behavior, not merely longer reasoning.",
+      "citations": 2
+    },
+    {
+      "title": "The Assistant as a Privileged Persona: A canonical reference in cross-persona self-recognition",
+      "year": 2026,
+      "authors": "G. Asvin",
+      "url": "https://api.semanticscholar.org/CorpusId:288854883",
+      "relevance": 3,
+      "abstract": "Post-trained language models can recognize their own outputs from a sentence or two out of context. In a companion paper \\citep{jack2026twomodes} we showed they can also recognize when they are currently acting on-policy, through the sharp entropy drop of assistant-mode generation. Both signals are tied to the Assistant persona that post-training mainly shapes. This paper widens the frame to cross-persona authorship judgement on Llama-3.1-70B-Instruct. We measure a matrix of authorship claim rates over a panel of evaluator and generator personas spanning librarian to dragon to Shakespeare, and make two claims. \\emph{First}, on the Assistant's own row of the matrix, the Assistant's claim rate, the persona-vector distance from the Assistant in activation space, and the entropy gap between the Assistant's surprise on a persona's text and the persona's surprise on its own text are all tightly coupled. This extends the entropy signature of \\emph{acting} from the companion paper to a retrospective signature of \\emph{having acted}. \\emph{Second}, this coupling fails off the Assistant's row: the natural symmetric extension of the entropy gap does not predict authorship for distinctive evaluators (pirate, dragon, Shakespeare); what does is asymmetric -- the evaluator's surprise compared to the Assistant's surprise on the same text, not to the generator's. We rule out the alternative that any persona could play this reference role by trying many candidate substitutes; none does. We interpret the asymmetry as the model performing an implicit Bayesian likelihood-ratio test against the Assistant as the canonical alternative hypothesis, with the persona-vector geometry of \\citet{chen2025persona} (every persona a delta off the Assistant) ensuring that the Assistant is the only persona universally accessible to that test.",
+      "citations": 0
+    },
+    {
+      "title": "Do Linear Probes Generalize Better in Persona Coordinates?",
+      "year": 2026,
+      "authors": "Prasad Mahadik, Adrians Skapars",
+      "url": "https://api.semanticscholar.org/CorpusId:288260157",
+      "relevance": 3,
+      "abstract": "It is becoming increasingly necessary to have monitors check for harmful behaviors during language model interactions, but text-only monitoring has not been sufficient. This is because models sometimes exhibit strategic deception and sandbagging, changing their behavior during evaluation. This motivates the use of white-box monitors like linear probes, which can read the model internals directly. Currently, such probes can fail under distribution shift, limiting their usefulness in real settings. We study whether there exists a low-dimensional subspace of the model internals that captures harmful behaviors more robustly, while leaving out spuriously correlative features. Inspired by the Assistant Axis and Persona Selection Model, we construct persona axes for deception and sycophancy using contrastive persona prompts. The first principal components, obtained by unsupervised PCA of the persona-specific vectors, cleanly separate harmful and harmless personas. Across 10 evaluation datasets, we show that persona-derived directions transfer non-trivially and probes trained on persona-PC projections generalize better than probes trained on raw activations. We also find that a unified axis consisting of multiple harmful and harmless behaviors improves generalization across behaviors and datasets. Overall, persona vectors provide a useful inductive bias for building more transferable behavior probes.",
+      "citations": 0
+    },
+    {
+      "title": "BILLY: Steering Large Language Models via Merging Persona Vectors for Creative Generation",
+      "year": 2025,
+      "authors": "Tsung-Min Pai, Jui-I Wang, Li-Chun Lu, Shao-Hua Sun, Hung-yi Lee, Kai-Wei Chang",
+      "url": "https://api.semanticscholar.org/CorpusId:282057151",
+      "relevance": 3,
+      "abstract": "Multi-LLM systems enhance the creativity of large language models by simulating human collective intelligence but suffer from significant drawbacks, such as high computational costs and inference latency. To address these limitations, we propose BILLY (BlendIng persona vectors for Large Language model creativitY), a training-free framework that captures the benefits of multi-LLM collaboration, i.e. inducing diverse perspectives and specialized expertise, within a single model. BILLY operates by extracting and blending multiple distinct persona vectors directly in the model's activation space. We steer the model's generation process with this merged vector while inference, enabling multi-perspective output without explicit multi-LLM communication. Our experiments across creativity-oriented benchmarks demonstrate that BILLY surpasses single model prompting and traditional multi-LLM approaches, while substantially reducing inference time and computational costs. Our analyses further reveal that distinct persona vectors can be blended to achieve both effective control over complementary aspects of generation and greater interpretability.",
+      "citations": 11
+    },
+    {
+      "title": "Transplanting, inverting, and preventing a misalignment persona: method-conditional emergent misalignment in Qwen2.5",
+      "year": 2026,
+      "authors": "Lyndon Drake, Zandi Eberstadt",
+      "url": "https://api.semanticscholar.org/CorpusId:289935017",
+      "relevance": 3,
+      "abstract": "Emergent misalignment (EM) --- the broad misbehaviour a language model acquires after fine-tuning on narrow harmful data --- is mediated in Qwen2.5 models by a latent persona direction, and that direction is causal in open weights. Transplanting it into a model that shares only pretraining with its source induces broad EM (2.83 $\\pm$ 0.26\\% misaligned against a random-direction floor of $\\sim$1.1\\%), and ablating a model's own direction roughly halves an overt inducer's broadcast (21\\% to 10\\%). The transplant doubles as a measurement method, causally assaying directions that a source model represents but cannot itself express. Whether a fine-tune recruits this persona depends on method and capacity, and since low-rank PEFT is the cheaper regime at scale, the recruiting method is also the economical one. On Qwen2.5-32B, LoRA at low ranks on insecure code recruits it (3.4\\% misaligned) while full SFT on identical data does not (0.3\\%) and moves against the persona axis (drift--persona cosine $+0.17$ at rank 1 to $-0.10$), the far-inducer, high-capacity exception consistent with a representational-distance $\\times$ capacity account. The persona's causal role is itself conditional. Steering a bad-medical SFT run away from the direction during training raises the broadcast from ${\\sim}24\\%$ to ${\\sim}50\\%$ while matched random controls stay at or below baseline, replicated across three training seeds, so removing the direction is no blanket recipe. Because recruitment is a loss-reducing shortcut that capacity renders redundant, it can be screened for and prevented in the tested instances. Persona loss-relevance at the SFT solution orders four inducers'broadcasts rank-perfectly within Qwen2.5, inoculation removes recruitment selectively (4.75\\% to 0.0\\%, code coherence 65\\% to 87\\%), and fine-tuning orthogonal to the single behaviour-derived axis reduces it persona-specifically.",
+      "citations": 0
+    },
+    {
+      "title": "Who Endorsed It? Measuring Authority Bias Across Expertise Levels in Language Models",
+      "year": 2026,
+      "authors": "Priyanka Mary Mammen, Emil Joswin, Shankar Venkitachalam",
+      "url": "https://api.semanticscholar.org/CorpusId:284910583",
+      "relevance": 3,
+      "abstract": "Prior research demonstrates that performance of language models on reasoning tasks can be influenced by suggestions, hints and endorsements. However, the influence of endorsement source credibility remains underexplored. We investigate whether language models exhibit systematic bias based on the perceived expertise of the provider of the endorsement. Across 4 datasets spanning mathematical, legal, and medical reasoning, we evaluate 11 models using personas representing four expertise levels per domain. Our results reveal that models are increasingly susceptible to incorrect/misleading endorsements as source expertise increases, with higher-authority sources inducing not only accuracy degradation but also increased confidence in wrong answers. We also show that this authority bias is mechanistically encoded within the model and a model can be steered away from the bias, thereby improving its performance even when an expert gives a misleading endorsement.",
+      "citations": 7
+    },
+    {
+      "title": "What Models Express, Suppress, and Resist: Auditing Open-Weight LLMs with Persona Vectors",
+      "year": 2026,
+      "authors": "W. Zeng, Ali Emami, Jinho D. Choi",
+      "url": "https://api.semanticscholar.org/CorpusId:290179260",
+      "relevance": 3,
+      "abstract": "What a language model will and will not do is largely set during post-training, but which behaviors it expresses, hides, or resists is not revealed by prompting alone. Persona vectors, behavioral directions in activation space, can probe this organization, but prior work covers only a handful of traits. We present the first systematic application of persona vectors at this scale, compiling a 53-trait inventory across four behaviorally distinct domains and labeling every trait in two open-weight models as natural (expressed at baseline), steerable latent but amplifiable, or intractable (resistant to standard extraction). Both models default to helpful, task-oriented behavior: all nine agentic traits are natural, and their default clinician behavior matches a board-certified psychologist's independent desirability judgments on 16 of 17 traits. Steering produces its largest gains on traits these defaults exclude: hyperbole, hallucination, and sycophancy. The same asymmetry holds across all 171 generic-trait pairs: two steerable traits can collapse the composition, but pairs involving a default never do. Where standard extraction fails on a trait like\"evil,\"a vector transferred from a fine-tuned variant still recovers it, with the residual refusals appearing inside the model's chain-of-thought. Persona vectors are most informative not as a set of controls but as a probe of behavioral organization.",
+      "citations": 0
+    },
+    {
+      "title": "As X, Do Y: How Persona and Task Combine in Instruction-Tuned LLMs",
+      "year": 2026,
+      "authors": "E. Xu",
+      "url": "https://api.semanticscholar.org/CorpusId:288650678",
+      "relevance": 3,
+      "abstract": "Role prompts of the form As X, do Y admit a clean linear decomposition at one specific site in the residual stream: the prompt-to-answer transition -- the last prompt token together with the first two generated tokens -- in an early/mid layer band. There, persona and task contribute through partially orthogonal additive directions. Forming a pure persona effect $\\Delta_X$, a pure task effect $\\Delta_Y$, and substituting $h_{BB} + \\Delta_X + \\Delta_Y$ for the clean residual yields downstream output within a small KL of clean on Gemma-2-2B-IT and Qwen-2.5-\\{1.5B, 3B\\}-Instruct, across a 12-cell short grid and a 48-cell long-persona grid, with persona-specific behavioral markers preserved. The natural inference from this additive structure is that the role prompt can be compressed into a single cached residual vector. \\emph{We show it cannot.} Injecting the cached additive prediction -- or even the oracle clean residual $h_{XY}$ -- into a baseline host prompt with the persona text removed does not approach the clean long-persona target, at one site or at many layers. Persona-conditioned multi-token generation flows through attention back to the persona-text positions throughout the prompt, which no residual at one site reproduces. Local additivity in the residual stream does not imply prompt compressibility. The additive structure at the prompt-to-answer transition supports interpretability and fine-grained steering of persona or task contributions; persona-conditioned behavior across the full continuation depends on a distributed prompt/KV mechanism that local activation arithmetic does not displace.",
+      "citations": 0
+    },
+    {
+      "title": "Do LLMs Experience an Internal Polylogue? Investigating Reasoning through the Lens of Personas",
+      "year": 2026,
+      "authors": "Nils A. Herrmann, Leander Girrbach, Kirill Bykov, Zeynep Akata",
+      "url": "https://api.semanticscholar.org/CorpusId:288258697",
+      "relevance": 3,
+      "abstract": "Recent work shows that large language models (LLMs) encode behavioral traits (\"personas\") as linear directions in activation space, often called\"persona vectors\". Prior work has used such directions as static handles for behavioral steering. We instead treat them as dynamic signals: probes we can monitor and intervene on as reasoning unfolds. We use the term polylogue to denote the time series of alignments between persona vectors and hidden activations over the course of generation. Experiments across four open-weight models show that polylogue features contain predictive signal for correctness comparable to low-dimensional activation summaries, while remaining interpretable through their associated persona directions. They also suggest concrete steering targets, namely, which latent directions to modulate at different stages of a response. We instantiate this as a simple paragraph-conditioned intervention that improves accuracy on three of the four models but degrades the fourth, suggesting that stage-aware latent steering is possible but not yet robust. Together, this positions the polylogue as an interpretable tool for reasoning-time monitoring and intervention.",
+      "citations": 1
+    },
+    {
+      "title": "Refusal Lives Downstream of Persona in Chat Models",
+      "year": 2026,
+      "authors": "V. Zhong, Qi-Rui Li",
+      "url": "https://api.semanticscholar.org/CorpusId:289625807",
+      "relevance": 3,
+      "abstract": "Linear directions in activation space have been identified for both refusal and persona traits in instruction-tuned chat models, but the two have been studied as separate mechanisms. We show they interact: a compliant persona gates refusal. In Qwen2.5-7B-Instruct and Llama-3.1-8B-Instruct, we extract a compliant model-persona direction and a refusal direction and intervene on both. Compliant persona steering suppresses refusal -- in Llama, the refusal rate falls from 97% to 2%. Reintroducing the refusal direction partially restores refusal at late layers but not at early ones. Projecting out the persona direction in a late-layer window restores it to baseline; projecting out a random direction does not. Refusal is therefore gated at the late-layer expression stage, downstream of where it is computed. Treating refusal as a single isolated direction misses its dependence on persona.",
+      "citations": 1
+    },
+    {
+      "title": "Creative Collision: Directorial Persona Steering and Competition in Large Language Models",
+      "year": 2026,
+      "authors": "Subramanyam Sahoo, Justin Shenk",
+      "url": "https://api.semanticscholar.org/CorpusId:289300682",
+      "relevance": 3,
+      "abstract": "Activation steering has emerged as a powerful tool for shaping the behaviour of large language models at inference time, yet most prior work injects a \\emph{single} semantic direction into the residual stream. We study the richer setting in which two semantically opposing steering vectors are superimposed -- a regime we call \\textbf{Creative Collision}. Concretely, we construct directorial persona vectors for Steven Spielberg (optimistic, redemptive moral valence) and Martin Scorsese (dark, morally ambiguous) via mean-difference activation contrast on curated screenplay-derived corpora, then interpolate between them with a scalar mixing parameter $\\alpha \\in [0,1]$ and a steering coefficient $\\lambda$. Across five evaluation axes -- moral valence, generation coherence, surface style, directional dominance, and vector geometry -- three principal findings emerge: (i)~Spielberg's representational signature exhibits robust \\emph{directional dominance}, suppressing Scorsese's moral influence across almost the entire interpolation range; (ii)~intermediate collision points paradoxically \\emph{improve} generation coherence relative to pure single-director steering at high $\\lambda$; and (iii)~both personas localise maximally to layer~28 of a 40-layer decoder-only transformer, revealing a shared \\emph{moral-tone substrate}. These results illuminate the geometry of competing semantic directions in transformer residual streams and have direct implications for controllable creative generation and value-aligned narrative synthesis.",
+      "citations": 0
+    },
+    {
+      "title": "Prompt-Activation Duality: Improving Activation Steering via Attention-Level Interventions",
+      "year": 2026,
+      "authors": "Diancheng Kang, Zhe-Yuan Liu, Ning Ma, Yue Huang, Zhao-Xuan Tan, Meng Jiang",
+      "url": "https://api.semanticscholar.org/CorpusId:288255009",
+      "relevance": 2,
+      "abstract": "Activation steering controls language model behavior by adding directions to internal representations at inference time, but standard residual-stream steering can fail in stateful dialogue. We identify KV-cache contamination as a key failure mode: steered token states are stored and repeatedly reused, turning a local perturbation into cumulative coherence degradation. To address this challenge, we propose Gated Cropped Attention-Delta steering (GCAD), which extracts steering signals from system-prompt contributions to self-attention and applies them with token-level gating. Across persona-steering experiments, GCAD preserves trait control while substantially improving long-horizon coherence. On the main multi-turn benchmark, GCAD improves average coherence drift from -18.6 to -1.9 and raises turn-10 trait expression from 78.0 to 93.1. These results suggest that activation steering becomes more reliable when interventions follow the prompt-mediated pathways that models already use for behavioral control.",
+      "citations": 4
+    },
+    {
+      "title": "Bridging Mechanistic Interpretability and Prompt Engineering with Gradient Ascent for Interpretable Persona Control",
+      "year": 2026,
+      "authors": "Harshvardhan Saini, Yi-Ming Tang, Dian-Bo Liu",
+      "url": "https://api.semanticscholar.org/CorpusId:284512621",
+      "relevance": 2,
+      "abstract": "Controlling emergent behavioral personas (e.g., sycophancy, hallucination) in Large Language Models (LLMs) is critical for AI safety, yet remains a persistent challenge. Existing solutions face a dilemma: manual prompt engineering is intuitive but unscalable and imprecise, while automatic optimization methods are effective but operate as\"black boxes\"with no interpretable connection to model internals. We propose a novel framework that adapts gradient ascent to LLMs, enabling targeted prompt discovery. In specific, we propose two methods, RESGA and SAEGA, that both optimize randomly initialized prompts to achieve better aligned representation with an identified persona direction. We introduce fluent gradient ascent to control the fluency of discovered persona steering prompts. We demonstrate RESGA and SAEGA's effectiveness across Llama 3.1, Qwen 2.5, and Gemma 3 for steering three different personas, sycophancy, hallucination, and myopic reward. Crucially, on sycophancy, our automatically discovered prompts achieve significant improvement (49.90% compared with 79.24%). By grounding prompt discovery in mechanistically meaningful features, our method offers a new paradigm for controllable and interpretable behavior modification. We release our scripts for RESGA and SAEGA in this github repo: https://github.com/HarshSaini10/RESGA_SAEGA.",
+      "citations": 5
+    },
+    {
+      "title": "Playing Devil's Advocate: Off-the-Shelf Persona Vectors Rival Targeted Steering for Sycophancy",
+      "year": 2026,
+      "authors": "Isha Kelkar, N. Alam, Vikram Kakaria, Madhur Panwar, Vasu Sharma, Maheep Chaudhary",
+      "url": "https://api.semanticscholar.org/CorpusId:288656198",
+      "relevance": 2,
+      "abstract": "Language models are often sycophantic: they agree with a user's stated opinion whether or not it is correct. Prior work has shown that this trait can be controlled by steering a model with a sycophancy persona vector (Chen et al., 2025). Such vectors, however, are extracted from data about sycophancy itself. We ask whether we can instead reuse existing vectors for general roles---Skeptic, Judge, Devil's Advocate---that were extracted without targeting sycophancy at all. On Gemma 2 27B and Qwen 3 32B, we compare these role vectors with a purpose-built Contrastive Activation Addition (CAA) sycophancy vector on a largely held-out, counterbalanced PhilPapers benchmark, using task-specific coefficient tuning on a separate split of sycophancy data. The selected\"critical\"roles achieve, on average, about 68% (Gemma) and 98% (Qwen) of CAA's reduction in the sycophancy logit. Less agreement does not mean more factual errors on the probes we checked: on 16 true and false factual claims, Qwen steered by the Skeptic or Judge vector still gives the correct answer in all 16 cases, matching the unsteered model and CAA.\"Conformist\"roles do not reliably produce the opposite effect. Role vectors also have low absolute cosine similarity with the measured CAA direction at the layer we steer; they are geometrically separate interventions, although this does not by itself show that they act through distinct downstream mechanisms. Together, these results show that general persona vectors can help mitigate sycophancy in LLMs, even when extracted without sycophancy-specific labels. Code: https://github.com/vkmk1/Sycophancy-Steering Results: https://github.com/kelkarI/sycophancy-clean-results",
+      "citations": 4
+    },
+    {
+      "title": "Refusal in Language Models Is Mediated by a Single Direction",
+      "year": 2024,
+      "authors": "Andy Arditi, Oscar Obeso, Aaquib Syed, Daniel Paleka, Nina Panickssery, Wes Gurnee, Neel Nanda",
+      "url": "https://www.semanticscholar.org/paper/88f9af8b0a28e14c42d4f70ce2d911b51a06cd16",
+      "relevance": 1,
+      "abstract": "Conversational large language models are fine-tuned for both instruction-following and safety, resulting in models that obey benign requests but refuse harmful ones. While this refusal behavior is widespread across chat models, its underlying mechanisms remain poorly understood. In this work, we show that refusal is mediated by a one-dimensional subspace, across 13 popular open-source chat models up to 72B parameters in size. Specifically, for each model, we find a single direction such that erasing this direction from the model's residual stream activations prevents it from refusing harmful instructions, while adding this direction elicits refusal on even harmless instructions. Leveraging this insight, we propose a novel white-box jailbreak method that surgically disables refusal with minimal effect on other capabilities. Finally, we mechanistically analyze how adversarial suffixes suppress propagation of the refusal-mediating direction. Our findings underscore the brittleness of current safety fine-tuning methods. More broadly, our work showcases how an understanding of model internals can be leveraged to develop practical methods for controlling model behavior.",
+      "citations": 1137
+    },
+    {
+      "title": "Empathy Is Steerable but Multi-Axial: Mechanism Geometry and Persona Effects in LLMs",
+      "year": 2026,
+      "authors": "JuHeon Ha, Byounghan Lee, Yunseo Choi, Kyung-Ah Sohn",
+      "url": "https://api.semanticscholar.org/CorpusId:292027649",
+      "relevance": 1,
+      "abstract": "Activation steering has been used to control traits such as honesty, refusal, and sycophancy, yet supportive empathy is evaluated along multiple dimensions that need not correspond to independently controllable activation directions. Using the EPITOME framework, which decomposes supportive empathy into Emotional Reactions, Interpretations, and Explorations, we study three instruction-tuned LLMs and ask whether candidate directions derived from these labels produce distinguishable intervention effects or instead share structure, and how persona prompts interact with those directions. We find that contrastive activation addition yields a stable middle-layer intervention that consistently shifts the EPITOME proxy scores across models, moving empathy analysis beyond response-level scoring. However, the recovered directions are only partially separable: steering one direction induces off-target shifts, and hand-crafted prompting shifts the empathy profile rather than isolating a single dimension. Persona prompts substantially change EPITOME scores, but a paired activation-shift decomposition shows that the recovered subspace captures only approximately 3 percent of persona-induced squared activation-shift magnitude at layer 15. Under this EPITOME-based definition, expressed empathy is steerable but multi-axial, and controlling persona-conditioned empathy requires targeting structure beyond individual mechanism directions.",
+      "citations": 0
+    },
+    {
+      "title": "Localizing Persona Representations in LLMs",
+      "year": 2025,
+      "authors": "C. Cintas, M. Rateike, Erik Miehling, Elizabeth Daly, Skyler Speakman",
+      "url": "https://api.semanticscholar.org/CorpusId:279070468",
+      "relevance": 1,
+      "abstract": "We present a study on how and where personas \u2013 defined by distinct sets of human characteristics, values, and beliefs \u2013 are encoded in the representation space of large language models (LLMs). Using a range of dimension reduction and pattern recognition methods, we first identify the model layers that show the greatest divergence in encoding these representations.We then analyze the activations within a selected layer to ex-amine how specific personas are encoded relative to others,including their shared and distinct embedding spaces. We findthat, across multiple pre-trained decoder-only LLMs, the analyzed personas show large differences in representation space only within the final third of the decoder layers. We observe overlapping activations for specific ethical perspectives \u2013 such as moral nihilism and utilitarianism \u2013 suggesting a degree of polysemy. In contrast, political ideologies like conservatism and liberalism appear to be represented in more distinct regions. These findings help to improve our understanding of how LLMs internally represent information and can inform future efforts in refining the modulation of specific human traits in LLM outputs. Warning: This paper includes potentially offensive sample statements.",
+      "citations": 3
+    },
+    {
+      "title": "Steering at the Source: Style Modulation Heads for Robust Persona Control",
+      "year": 2026,
+      "authors": "Yoshihiro Izawa, Gouki Minegishi, Koshi Eguchi, Sosuke Hosokawa, K. Taura",
+      "url": "https://api.semanticscholar.org/CorpusId:286568682",
+      "relevance": 1,
+      "abstract": "Activation steering offers a computationally efficient mechanism for controlling Large Language Models (LLMs) without fine-tuning. While effectively controlling target traits (e.g., persona), coherency degradation remains a major obstacle to safety and practical deployment. We hypothesize that this degradation stems from intervening on the residual stream, which indiscriminately affects aggregated features and inadvertently amplifies off-target noise. In this work, we identify a sparse subset of attention heads (only three heads) that independently govern persona and style formation, which we term Style Modulation Heads. Specifically, these heads can be localized via geometric analysis of internal representations, combining layer-wise cosine similarity and head-wise contribution scores. We demonstrate that intervention targeting only these specific heads achieves robust behavioral control while significantly mitigating the coherency degradation observed in residual stream steering. More broadly, our findings show that precise, component-level localization enables safer and more precise model control.",
+      "citations": 4
+    },
+    {
+      "title": "Controllable and explainable personality sliders for LLMs at inference time",
+      "year": 2026,
+      "authors": "F. Hoppe, D. Khachaturov, Robert Mullins, M. H. Meng",
+      "url": "https://api.semanticscholar.org/CorpusId:286238900",
+      "relevance": 1,
+      "abstract": "Aligning Large Language Models (LLMs) with specific personas typically relies on expensive and monolithic Supervised Fine-Tuning (SFT) or RLHF. While effective, these methods require training distinct models for every target personality profile. Inference-time activation steering offers a parameter-efficient alternative, yet naive approaches fail to control multiple traits simultaneously due to destructive vector interference. In this work, we propose a modular framework for continuous, multi-dimensional personality control. Our key innovation is Sequential Adaptive Steering (SAS): a method that orthogonalizes steering vectors by training subsequent probes on the residual stream shifted by prior interventions. This approach transforms steering vectors into reusable primitives, allowing users to instantly synthesize complex, high-fidelity personality profiles by simply adjusting coefficients alpha. We validate our framework on the Big Five personality traits, demonstrating that it outperforms naive baselines in both goal adherence and coherence, enabling precise, holistic personality modulation without updating model parameters.",
+      "citations": 2
+    },
+    {
+      "title": "Steering Llama 2 via Contrastive Activation Addition",
+      "year": 2023,
+      "authors": "Nina Rimsky, Nick Gabrieli, Julia Schulz, Meg Tong, Evan Hubinger, Alexander Matt Turner",
+      "url": "https://www.semanticscholar.org/paper/edd1dc1e8d7989f36c0e54f69f4aeb5e597edc8b",
+      "relevance": 1,
+      "abstract": "We introduce Contrastive Activation Addition (CAA), an innovative method for steering language models by modifying their activations during forward passes. CAA computes\"steering vectors\"by averaging the difference in residual stream activations between pairs of positive and negative examples of a particular behavior, such as factual versus hallucinatory responses. During inference, these steering vectors are added at all token positions after the user's prompt with either a positive or negative coefficient, allowing precise control over the degree of the targeted behavior. We evaluate CAA's effectiveness on Llama 2 Chat using multiple-choice behavioral question datasets and open-ended generation tasks. We demonstrate that CAA significantly alters model behavior, is effective over and on top of traditional methods like finetuning and system prompt design, and minimally reduces capabilities. Moreover, we gain deeper insights into CAA's mechanisms by employing various activation space interpretation methods. CAA accurately steers model outputs and sheds light on how high-level concepts are represented in Large Language Models (LLMs).",
+      "citations": 1173
+    },
+    {
+      "title": "Can Role Vectors Affect LLM Behaviour?",
+      "year": 2025,
+      "authors": "Daniele Potert\u00ec, A. Seveso, Fabio Mercorio",
+      "url": "https://www.semanticscholar.org/paper/8db57bc298fbd5b95de8200c03045b69783cdcd1",
+      "relevance": 1,
+      "abstract": ",",
+      "citations": 13
+    },
+    {
+      "title": "Probing Persona-Dependent Preferences in Language Models",
+      "year": 2026,
+      "authors": "Oscar Gilg, P. Beckmann, Daniel Paleka, Patrick Butlin",
+      "url": "https://api.semanticscholar.org/CorpusId:288256275",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) can be said to have preferences: they reliably pick certain tasks and outputs over others, and preferences shaped by post-training and prompting appear to influence much of their behaviour. But models can also adopt different personas which have radically different preferences. How is this implemented internally? Does each persona use its own preference representations, or are some representations shared? We train linear probes on residual-stream activations of Gemma-3-27B and Qwen-3.5-122B to predict revealed pairwise task choices, and identify a genuine preference vector: it tracks the model's preferences as they shift across a range of prompts and situations, and on Gemma-3-27B steering along it causally controls pairwise choice. Some preference information transfers across the prompted personas we test: a probe trained on the helpful assistant predicts and steers the choices of qualitatively different personas, including an evil persona whose preferences anti-correlate with the Assistant's.",
+      "citations": 4
+    },
+    {
+      "title": "Turn-Averaged SAEs for Feature Discovery and Long-Context Attribution",
+      "year": 2026,
+      "authors": "Kevin G. Der, Harish Kamath, Ben Thompson",
+      "url": "https://api.semanticscholar.org/CorpusId:289685107",
+      "relevance": 1,
+      "abstract": "Sparse autoencoders (SAEs) have become a useful tool for extracting interpretable features in language models. However, standard SAE architectures operate on individual token activations, meaning that the number of active features scales linearly with context length, and studying long model transcripts becomes difficult. We introduce turn-averaged SAEs, which represent a single Human or Assistant turn with a fixed number of features by learning to reconstruct the average model activation across the turn. We find that turn-averaged features describe a single turn's high-level characteristics more completely than per-token features when judged by an LLM. We also demonstrate that turn-averaged SAEs greatly simplify common downstream uses of SAEs like attribution graphs. Broadly, turn-averaged SAEs make interpretability techniques practical at long context lengths.",
+      "citations": 1
+    },
+    {
+      "title": "Multi-Turn Neural Transparency: Surfacing Neural Activations Improves User Calibration to LLM Behavioral Drift",
+      "year": 2026,
+      "authors": "Sheer Karny, Anthony Baez, Pat Pataranutaporn",
+      "url": "https://api.semanticscholar.org/CorpusId:288392913",
+      "relevance": 1,
+      "abstract": "Chatbot behavior is often opaque to users, as responses can shift unpredictably across a conversation, drifting toward sycophancy, toxicity, or other unsafe responses. This can leave users vulnerable, either being misled by overly agreeable AI or manipulated by a harmful chatbot that no longer behaves as intended. To address this, we introduce multi-turn neural transparency, an interface that surfaces an LLM's internal neural activations in real time to help users anticipate and recognize how behaviors change across turns. We construct behavioral vectors for six personality traits using methods from mechanistic interpretability, identifying directions in activation space that correlate with trait expression ($R^2 \\geq 0.9$) via contrastive system prompts, and visualize trait expression using a sunburst and drift panel that updates at each turn. In a randomized controlled study (N = 246), participants predicted trait expression from a system prompt alone, then rated observed behavior after interacting with the chatbot for both assistant and role-play personas. We find that participants without visualization struggled to accurately evaluate traits (RMSE $\\approx$ 0.6-0.7), while the inclusion of neural transparency significantly improved both anticipation and evaluation compared to no visualization (d = -0.34 to -0.49). The multi-turn dynamic visualization additionally outperformed the static single-turn visualization on holistic evaluation of model behavior (d = -0.32). Transparency also reduced overconfidence: participants without visualization grew more confident despite no gain in accuracy. These findings suggest that surfacing internal model representations to everyday users is a meaningful step toward more transparent and informed human-AI interaction.",
+      "citations": 0
+    },
+    {
+      "title": "The Geometry of Personality: Activation Steering with Jungian Cognitive Functions",
+      "year": 2026,
+      "authors": "Zai-Ran Liu, Yu-Meng Wang, Junchen Fu, J. Glasgow, Leiden University",
+      "url": "https://api.semanticscholar.org/CorpusId:290466742",
+      "relevance": 1,
+      "abstract": "Activation steering enables control and interpretation of LLMs, yet existing work primarily models personality through static trait frameworks such as the Big Five. We investigate whether personality can instead be represented and controlled as a set of cognitive processes using the eight Jungian Cognitive Functions. To this end, we introduce a framework comprising a Jungian evaluation protocol and a dataset of over 2,100 role-playing character narrations. Activation steering vector extraction and evaluation experiments on Llama-3.1-8B demonstrate effective monotonic control over all eight cognitive functions through activation steering. Beyond controllability, our analysis reveals that: 1. personality information is concentrated in middle transformer layers; 2. steering vectors exhibit structured geometric relationships consistent with distinctions between rational and irrational functions; 3. effective multi-dimensional steering directions cannot be recovered as linear combinations of single-function directions. These findings provide new insights into the representation of personality in LLM activation space and establish a framework for studying interpretable, effective, and multi-dimensional personality control.",
+      "citations": 0
+    },
+    {
+      "title": "The Granularity Axis: A Micro-to-Macro Latent Direction for Social Roles in Language Models",
+      "year": 2026,
+      "authors": "Chonghan Qin, Xia-Chong Feng, Ziyun Song, Xiaocheng Feng, Jing Xiong, Lingpeng Kong",
+      "url": "https://api.semanticscholar.org/CorpusId:288014527",
+      "relevance": 1,
+      "abstract": "Large language models (LLMs) are routinely prompted to take on social roles ranging from individuals to institutions, yet it remains unclear whether their internal representations encode the granularity of such roles, from micro-level individual experience to macro-level organizational, institutional, or national reasoning. We show that they do. We define a contrast-based Granularity Axis as the difference between mean macro- and micro-role hidden states. In Qwen3-8B, this axis aligns with the principal axis (PC1) of the role representation space at cosine 0.972 and accounts for 52.6% of its variance, indicating that granularity is the dominant geometric axis organizing prompted social roles. We construct 75 social roles across five granularity levels and collect 91,200 role-conditioned responses over shared questions and prompt variants, then extract role-level hidden states and project them onto the axis. Role projections increase monotonically across all five levels, remain stable across layers, prompt variants, endpoint definitions, held-out splits, and score-filtered subsets, and transfer to Llama-3.1-8B-Instruct. The axis is also causally relevant: activation steering along it shifts response granularity in the predicted direction, with Llama moving from 2.00 to 3.17 on a five-point macro scale under positive steering on prompts that admit local responses. The two models differ in controllability, suggesting that steering depends on each model's default operating regime. Overall, our findings suggest that social role granularity is not merely a stylistic surface feature, but a structured, ordered, and causally manipulable latent direction in role-conditioned language model behavior.",
+      "citations": 0
+    },
+    {
+      "title": "Probing then Editing Response Personality of Large Language Models",
+      "year": 2025,
+      "authors": "Tianjie Ju, Zhenyu Shao, Bowen Wang, Yujia Chen, Zhuosheng Zhang, Hao Fei, Mong Li Lee, W. Hsu, Su-Feng Duan, Gong-Shen Liu",
+      "url": "https://www.semanticscholar.org/paper/b1c73f295558067d8c4985649b9fe88289059864",
+      "relevance": 1,
+      "abstract": "Large Language Models (LLMs) have demonstrated promising capabilities to generate responses that simulate consistent personality traits. Despite the major attempts to analyze personality expression through output-based evaluations, little is known about how such traits are internally encoded within LLM parameters. In this paper, we introduce a layer-wise probing framework to systematically investigate the layer-wise capability of LLMs in simulating personality for responding. We conduct probing experiments on 11 open-source LLMs over the PersonalityEdit benchmark and find that LLMs predominantly simulate personality for responding in their middle and upper layers, with instruction-tuned models demonstrating a slightly clearer separation of personality traits. Furthermore, by interpreting the trained probing hyperplane as a layer-wise boundary for each personality category, we propose a layer-wise perturbation method to edit the personality expressed by LLMs during inference. Our results show that even when the prompt explicitly specifies a particular personality, our method can still successfully alter the response personality of LLMs. Interestingly, the difficulty of converting between certain personality traits varies substantially, which aligns with the representational distances in our probing experiments. Finally, we conduct a comprehensive MMLU benchmark evaluation and time overhead analysis, demonstrating that our proposed personality editing method incurs only minimal degradation in general capabilities while maintaining low training costs and acceptable inference latency. Our code is publicly available at https://github.com/universe-sky/probing-then-editing-personality.",
+      "citations": 8
+    },
+    {
+      "title": "Steering LLMs Responses Towards Moral Foundations on the Norwegian MFQ-30",
+      "year": 2026,
+      "authors": "H. Andersen, David Dichas",
+      "url": "https://api.semanticscholar.org/CorpusId:292197534",
+      "relevance": 1,
+      "abstract": "Recent work applies human psychometric questionnaires to large language models to elicit moral and value profiles, but it is not clear whether these instruments measure anything stable in models or whether the resulting profiles can be moved toward a target human population. We administer the Norwegian Moral Foundations Questionnaire (MFQ-30) to six open-weight LLMs and compare their foundation profiles to a sample of N = 1,282 Norwegian respondents. We test two steering interventions, prompt-level persona steering and activation-level ActAdd. Half the models engage with the questionnaire under our attention check. The other half default to flat or central-tendency outputs that look near-human on average without tracking item content. A neutral Nordic-respondent persona, written without any distributional information from the human sample, brings the engaging models 44-77% closer to the Norwegian mean in Mahalanobis $d^2$. One-pair ActAdd at a fixed mid-layer flattens the foundation profile rather than steering individual foundations. For at least one model the same persona that shifts the profile also induces engagement that was absent at baseline, a concrete instance of the cognitive phantoms that Peereboom et al. (2025) warn about.",
+      "citations": 0
+    },
+    {
+      "title": "DeSRPA: Decoupled Speech Role-Playing Agent via Inference-Time Intervention",
+      "year": 2026,
+      "authors": "Wen Tang, Zheng-Lin Wan, Takahiro Komamizu, Ichiro Ide",
+      "url": "https://api.semanticscholar.org/CorpusId:289622429",
+      "relevance": 1,
+      "abstract": "While Large Language Models (LLMs) have revolutionized text-based role-playing, creating immersive Speech Role-Playing Agents (SRPAs) requires a seamless bridge between cognitive reasoning and paralinguistic nuances. Current SRPAs primarily rely on end-to-end (E2E) fine-tuning. However, this paradigm suffers from poor generalization to unseen characters due to its reliance on role-specific data, while imposing a\"modality alignment tax\"that degrades intrinsic LLM reasoning capabilities. We propose DeSRPA, an agentic framework for character role play via inference-time intervention on frozen backbones. DeSRPA employs a dual-level control vector mechanism, Internal Cognitive Steering and External Expressive Rendering, to synchronize\"mind\"and\"voice\". Experiments on SpeechRole and OmniCharacter benchmarks demonstrate that DeSRPA significantly outperforms E2E baselines in personality and emotional consistency. It achieves high speech naturalness, narrowing the gap with proprietary models like GPT-4o Audio, while remaining a scalable and training-free paradigm.",
+      "citations": 0
+    },
+    {
+      "title": "Best Friends, Not Forever: Evaluating Long-Horizon Persona Collapse and Behavioral Drift in AI Companions",
+      "year": 2026,
+      "authors": "P. Venkit, Akshara Prabhakar, Yu Li, Daniel Lee, Chien-Sheng Wu",
+      "url": "https://api.semanticscholar.org/CorpusId:290781550",
+      "relevance": 1,
+      "abstract": "As AI companions increasingly mediate repeated social interaction, users may rely on a stable role and shared history, yet locally acceptable replies do not ensure that either persists. We study two observable long-horizon failures:'persona collapse', the loss of a deployed role, boundaries, values, or style, and'behavioral drift', the gradual or recurrent erosion of those properties. We introduce ANCHOR, a controlled synthetic audit that separately measures persona enactment and trajectory recall. The study contains 2,008 conversations spanning 27 personas, nine interaction schedules, three generated memory settings, and four evaluated models. The Identity Probe combines a sealed 102-item questionnaire with turn-level judgments, while the Trajectory Probe scores 110 calibrated counterfactual questions from 35 conversation banks. Our results show that no evaluated model and configuration reliably preserves either dimensions: trajectory accuracy averages only 44.4%, user-state recall remains near four-option chance, and no tested context condition or memory consistently resolves these failures. Questionnaire retention also varies by model and persona facet, disagrees with turn-level behavior, and is sensitive to evaluator choice. These results indicate that current systems do not yet reliably support long-horizon companion continuity and that audits must distinguish persona enactment, trajectory recall, evaluator provenance, and deployment context rather than collapse them into a single trust or stability score.",
+      "citations": 1
+    }
+  ]
+}
+
+Results saved to: paper_search_results/assistant_persona_axis_in_residual_stream_activation_space_20261004_183049.jsonl

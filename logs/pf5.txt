@@ -1,0 +1,8 @@
+{
+  "error": "Server error '500 Internal Server Error' for url 'http://localhost:8000/api/2/rounds'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500",
+  "fallback": true,
+  "detail": "A content Agent has failed to respond; BroadSearchAgent failed to respond; No documents retrieved from dense and s2 search",
+  "message": "Proceeding with manual search (arXiv, Semantic Scholar, Papers with Code)"
+}
+
+Results saved to: paper_search_results/activation_steering_to_humanize_AI-generated_text_and_evade_detectors_20261004_183525.jsonl
