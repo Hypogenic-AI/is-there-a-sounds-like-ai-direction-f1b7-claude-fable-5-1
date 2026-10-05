@@ -1,0 +1,43 @@
+\section{Introduction}
+\label{sec:intro}
+
+Readers often say that a text ``sounds like AI''. LLMs appear to agree: a linear probe on the activations of a frozen LLM separates human-written from AI-written text, and it does so better than dedicated detectors \citep{quaremba2026linear,vishnyakov2026svdetect,kuznetsov2025sae}.
+The separating direction transfers across domains and generators and tracks a graded ``machineness''.
+This raises a natural question: is ``sounding like AI'' one of the linear features that control what a model writes, in the way that refusal \citep{arditi2024refusal} and personas \citep{chen2025persona,lu2026assistant} are?
+
+The answer matters for three reasons.
+First, a single vector that controls how AI-like a model's output reads would be a cheap way to evade detectors.
+Second, it bears on what the model represents: a variable for ``this text was written by a model'', or only a style.
+Third, it bears on whether sounding like AI is the same thing as being the Assistant.
+
+Existing work leaves the question open on two counts.
+All of the probe evidence is {\em readout}: an LLM reads someone else's text and a probe classifies it.
+No paper intervenes on the direction while the model writes and scores the result with a detector that did not see the activations.
+And no paper controls for the obvious confounds: formality, fluency, length, domain, and the assistant persona.
+There are reasons to suspect confounding.
+The tokens that the direction of \citet{vishnyakov2026svdetect} promotes are those of polished, formal prose, and \citet{xu2026base} show that commercial detectors judge base-model continuations to be human, which suggests that detectors see the register that post-training creates and not machine authorship as such.
+
+{\bf Is the human-vs-AI direction causal for generation, and is it a distinct ``AI-ness'' direction?}
+We test both in \llamai and its base model \llamab.
+We fit a difference-of-means direction, \airead, on matched pairs: a human continuation and a chat-model continuation of the same 500-word prefix.
+We then add or ablate it while the model writes on 208 held-out prompts and score the output with an LLM judge and four detectors, none of which uses Llama activations.
+We compare against two equal-norm random directions, directions for formality, fluency, length and an assistant-axis proxy, and a prompt baseline, all at matched coherence.
+We then repeat the readout and the steering in the base model.
+
+We find a single steerable direction, but ``AI authorship'' is the wrong name for it.
+Steering toward the human side lowers the judge's mean AI-likelihood from 92.4 to 70.6 and the share of flagged texts from 98.6\% to 41\% while coherence stays within 10 points of unsteered output; random directions move the judge by at most 5 points and the prompt by 3.3 (\figref{fig:dose}).
+The effect is specific but partial.
+The best supervised detector moves only from 99.5\% to 85\% flagged, and a Binoculars-style zero-shot detector moves the opposite way.
+The direction is the register of chat-tuned models: its cosine with the direction ``instruct-model text minus base-model text'' is 0.96, steering along that direction reproduces the effect, and removing its span abolishes the effect.
+Text written by base LLMs sits only about one human standard deviation toward the ``AI'' side, against 4.4--4.8 for chat-model text.
+The direction already exists in the base model (cosine 0.84), and adding it there makes the base model's continuations read as AI to the judge (59 to 92.5) while judged coherence rises.
+
+In summary, our contributions are:
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item We run the first causal test of the human-vs-AI readout direction during generation, scored by independent detectors with random-direction, confound-direction, prompt, ablation, and length controls at matched coherence.
+    \item We show that the direction is causal for how AI-like text reads to an LLM judge, weakly causal for a supervised detector, and reversed for a perplexity-based detector, so it is not a practical evasion tool.
+    \item We show that the direction coincides with chat-model register and is distinct from formality, fluency, length, genre, and an assistant-axis proxy; it does not encode ``written by a model''.
+    \item We show that the direction pre-exists chat tuning, and that chat tuning moves the model's own writing along it rather than sharpening the representation.
+\end{itemize}
+
+We review related work in \secref{sec:related}, describe the directions, interventions and measures in \secref{sec:method}, report results in \secref{sec:results}, and discuss implications and limitations in \secref{sec:discussion}.

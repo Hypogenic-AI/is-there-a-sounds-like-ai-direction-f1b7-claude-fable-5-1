@@ -1,9 +1,9 @@
 {
-  "success": false,
+  "success": true,
   "stages": {
     "resource_finder": {
-      "success": false,
-      "completion_marker": null,
+      "success": true,
+      "completion_marker": "/workspaces/is-there-a-sounds-like-ai-direction-f1b7-claude-fable-5-1/.resource_finder_complete",
       "outputs": {
         "literature_review": "/workspaces/is-there-a-sounds-like-ai-direction-f1b7-claude-fable-5-1/literature_review.md",
         "resources_catalog": "/workspaces/is-there-a-sounds-like-ai-direction-f1b7-claude-fable-5-1/resources.md",
@@ -13,7 +13,15 @@
       },
       "log_file": "/workspaces/is-there-a-sounds-like-ai-direction-f1b7-claude-fable-5-1/logs/resource_finder_claude.log",
       "transcript_file": "/workspaces/is-there-a-sounds-like-ai-direction-f1b7-claude-fable-5-1/logs/resource_finder_claude_transcript.jsonl",
-      "elapsed_time": 1417.0972299575806,
+      "elapsed_time": 123.84326457977295,
+      "background_processes_terminated": false
+    },
+    "experiment_runner": {
+      "success": true,
+      "return_code": 0,
+      "elapsed_time": 19428.960379838943,
+      "log_file": "/workspaces/is-there-a-sounds-like-ai-direction-f1b7-claude-fable-5-1/logs/execution_claude.log",
+      "transcript_file": "/workspaces/is-there-a-sounds-like-ai-direction-f1b7-claude-fable-5-1/logs/execution_claude_transcript.jsonl",
       "background_processes_terminated": false
     }
   },

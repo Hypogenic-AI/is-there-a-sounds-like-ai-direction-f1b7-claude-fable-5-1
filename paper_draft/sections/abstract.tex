@@ -1,0 +1,9 @@
+Linear probes on LLM activations separate human-written from AI-written text better than dedicated detectors, but this evidence is readout only: nobody has intervened on the direction while a model writes, or checked whether it is a relabelling of formality, fluency, or the assistant persona.
+We run that test on \llamai and its base model.
+We fit a difference-of-means direction on matched human and chat-model continuations, add or ablate it during generation, and score the output with detectors that never saw the activations.
+The direction is causal: at the largest coefficient that keeps coherence within 10 points of unsteered output, an LLM judge's mean AI-likelihood falls from 92.4 to 70.6 and the share of texts it flags falls from 98.6\% to 41\%, while equal-norm random directions, a formality direction, an assistant-axis proxy, and a ``write like a human'' prompt move it by at most 5 points.
+The effect is not detector-general: a supervised detector moves slightly (99.5\% to 85\% flagged) and a Binoculars-style detector moves the opposite way.
+The direction is also not an authorship variable.
+It has cosine 0.96 with the direction separating instruct-model text from base-model text, removing that component abolishes the steering effect, and base-model text is nearly indistinguishable from human text along it (AUROC 0.75--0.78 against $\geq$0.99 for chat-model text).
+The direction already exists in the base model; chat tuning moves the model's own writing along it.
+Activation-probe detectors are, in this model, detectors of chat-model register.

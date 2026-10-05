@@ -1,0 +1,27 @@
+\section{Related Work}
+\label{sec:related}
+
+\para{Detecting machine-generated text from activations.}
+\citet{quaremba2026linear} train logistic-regression probes on the residual states of Llama-3-8B and report out-of-domain AUROC of 0.81--0.99 across four benchmarks, ahead of 16 baselines; the probe projection correlates with edit strength, which they read as a ``machineness spectrum''.
+\citet{vishnyakov2026svdetect} build per-layer directions in a frozen GPT-Neo and use the cosine with each direction as a detection feature. Despite the name, they do not steer generation.
+\citet{kuznetsov2025sae} find sparse-autoencoder features in Gemma-2-2b that detect AI text and steer single features to interpret them, but do not score the steered text with a detector or compare against random directions.
+\citet{ardoin2026self} show that a model's own summaries are linearly separable from human ones and that text written under random steering carries a trace that can be read back.
+Unlike these papers, we intervene on the readout direction while the model writes and measure the result with detectors that are independent of the activations.
+
+\para{Activation steering.}
+Difference-of-means directions between contrastive activations control behaviours when added to or ablated from the residual stream \citep{turner2023actadd,panickssery2023caa,arditi2024refusal,chen2025persona}, and style attributes are steerable in the same way \citep{konen2024style}.
+\citet{marks2023geometry} find that difference-of-means directions are more causally implicated than logistic-regression probe directions even when the probe classifies better; both probe-based detection papers default to logistic regression.
+\citet{tan2024reliability} and \citet{wu2025axbench} show that steering trades off against fluency and should be compared with prompting.
+We adopt the necessity-and-sufficiency protocol of \citet{arditi2024refusal} and the controls these papers recommend, and compare the two kinds of direction head to head.
+
+\para{The assistant persona and base models.}
+\citet{lu2026assistant} define an Assistant Axis as the difference between default-assistant and role-play activations and show that a similar persona space exists in base models.
+The non-assistant pole of that axis is theatrical role-play, not ordinary human prose, so its relation to human-vs-AI text is an empirical question.
+\citet{xu2026base} show that GPTZero and Pangram judge base-model continuations to be overwhelmingly human and instruct-model continuations not, and \citet{reinhart2024hape} show with Biber features that instruction-tuned models deviate from human style far more than base models do.
+Building on these behavioural results, we test the corresponding geometric claim: that the readout direction is the instruct-minus-base register and is orthogonal to the persona axis.
+
+\para{Detectors and evasion.}
+Zero-shot detectors such as \bino \citep{hans2024binoculars} and Fast-DetectGPT \citep{bao2023fastdetectgpt} score predictability; supervised detectors such as \radar \citep{hu2023radar} are trained classifiers.
+Benchmarks include \hcthree \citep{guo2023hc3}, \mage \citep{li2023mage}, and \raid \citep{dugan2024raid}.
+Paraphrasing attacks evade detectors in text space \citep{krishna2023dipper,cheng2025adversarial}.
+Activation steering would be the activation-space counterpart; we find that along this direction it is not an effective one.

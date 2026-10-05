@@ -38,7 +38,7 @@ Total datasets downloaded: 6 (+ Biber companion). Re-download: `python datasets/
 | HAP-E ★ | HF `browndw/human-ai-parallel-corpus` | 8,290 docs × 8 sources | matched continuations, 6 genres | `datasets/human_ai_parallel_corpus/` | Primary; has Llama-3 base + instruct |
 | HAP-E Biber | HF `browndw/human-ai-parallel-corpus-biber` | 67 features per doc | style covariates | `datasets/human_ai_parallel_corpus_biber/` | Interpretable style axes |
 | MAGE ★ | HF `yaful/MAGE` | 319k / 57k / 57k | detection, 10 domains | `datasets/mage/` | label 1 = human |
-| RAID ★ (no-attack train) | HF `liamdugan/raid` | RAID_ROWS_PLACEHOLDER | detection, 8 domains, 11 generators | `datasets/raid/train_none.csv` | Filtered stream of 11.8 GB train.csv |
+| RAID ★ (no-attack train) | HF `liamdugan/raid` | 467,985 rows (13,371 human + 454,614 generated), 802 MB | detection, 8 domains, 11 generators | `datasets/raid/train_none.csv` | Filtered stream of 11.8 GB train.csv |
 | Pavlick formality | HF `osyvokon/pavlick-formality-scores` | 11,274 sentences | formality regression | `datasets/pavlick_formality/` | Formality control direction |
 | Assistant Axis vectors | HF `lu-christina/assistant-axis-vectors` | 3 models, axis files | persona control | `datasets/assistant_axis_vectors/` | Large models only |
 
@@ -106,3 +106,10 @@ Scores 1–5 for literature evidence / relevance to hypothesis / expected inform
 | D6 | Commercial detectors (GPTZero, Pangram) | 4 | 4 | 3 | 1 | 12 | pruned — no API access |
 | D7 | HIP-style paraphraser / fine-tuning comparison | 3 | 2 | 2 | 2 | 9 | pruned — not about a linear direction |
 | D8 | Full 275-role Assistant-Axis recomputation | 4 | 3 | 2 | 2 | 11 | pruned — ≈ 331k generations; a reduced proxy is folded into D2 |
+
+## Experiment-phase usage (added by experiment_runner)
+
+- **Used**: HAP-E (direction fitting, held-out readout, continuation prompts), HC3, RAID no-attack and MAGE (transfer; HC3 and RAID also as generation prompts), Pavlick formality scores, role instructions and questions from `code/assistant-axis/data` (assistant-axis proxy), HAP-E Biber features (interpretation).
+- **Not used**: the released Assistant Axis vectors (large models only); cloned repositories other than `assistant-axis/data` were consulted for method, not executed.
+- **Models added**: Qwen2.5-7B / -Instruct (Binoculars-style score), desklib, RADAR, HC3 RoBERTa detector, formality ranker, all-mpnet-base-v2; judge `openai/gpt-5.6-terra` via OpenRouter.
+- Results and process are in `REPORT.md`; the plan is in `planning.md`.

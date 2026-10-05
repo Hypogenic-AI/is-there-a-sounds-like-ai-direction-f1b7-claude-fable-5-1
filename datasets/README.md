@@ -17,7 +17,7 @@ Small truncated samples are in each `*/samples/samples.json`.
 | `human_ai_parallel_corpus/` | `browndw/human-ai-parallel-corpus` | 8,290 docs × 8 sources | 114 MB |
 | `human_ai_parallel_corpus_biber/` | `browndw/human-ai-parallel-corpus-biber` | 8,290 × 67 features × 8 sources | 13 MB |
 | `mage/` | `yaful/MAGE` | 319k / 57k / 57k (+2 OOD sets) | 554 MB |
-| `raid/` | `liamdugan/raid` (train.csv, `attack == none` only) | see below | see below |
+| `raid/` | `liamdugan/raid` (train.csv, `attack == none` only) | 467,985 | 802 MB |
 | `pavlick_formality/` | `osyvokon/pavlick-formality-scores` | 11,274 sentences | 2 MB |
 | `assistant_axis_vectors/` | `lu-christina/assistant-axis-vectors` (axis files only) | 3 models | 5 MB |
 
@@ -46,7 +46,7 @@ Small truncated samples are in each `*/samples/samples.json`.
 - **Format**: CSV; `id`, `adv_source_id`, `source_id` (id of the human doc the prompt came from → pair human/AI on this), `model`, `decoding`, `repetition_penalty`, `attack`, `domain`, `title`, `prompt`, `generation` (the text; for `model == human` it is the human document).
 - **Download**: the full `train.csv` is 11.8 GB; `download_datasets.py raid` streams it and keeps only `attack == "none"` rows into `raid/train_none.csv`. (The 1.2 GB `test.csv` has hidden labels; `extra.csv` adds code/German/Czech — not downloaded.)
 - **Load**: `pd.read_csv("datasets/raid/train_none.csv")`
-- **Notes**: `title` + `prompt` give ready-made generation prompts with a matched human document; chat vs non-chat generator pairs give a second base-vs-chat contrast. Row counts: see "Validation" below.
+- **Notes**: `title` + `prompt` give ready-made generation prompts with a matched human document; chat vs non-chat generator pairs give a second base-vs-chat contrast. 467,985 rows = 13,371 human documents × 35 (1 human + 5 API generators × 2 decodings + 6 open generators × 2 decodings × 2 repetition penalties). Human docs per domain: abstracts 1,766 · books 1,781 · news 1,780 · poetry 1,771 · recipes 1,772 · reddit 1,779 · reviews 943 · wiki 1,779. The stream takes ~10 min; the script asserts that all 11,779,491,051 bytes arrived.
 
 ## 5. Pavlick & Tetreault formality scores (confound control)
 - 11,274 sentences (`domain` ∈ answers/blog/email/news, `avg_score` ∈ [−3, 3], `sentence`). Use to build an independent *formality* direction (diff-of-means of top vs bottom tercile, or regression) for cosine/projection-out comparisons. A ready classifier `s-nlp/roberta-base-formality-ranker` is on HF for scoring generated text.
@@ -57,4 +57,4 @@ Small truncated samples are in each `*/samples/samples.json`.
 - **Notes**: only usable directly if the experiment model is one of these three (Gemma-2-27B-it in bf16 ≈ 54 GB does not fit the 48 GB A6000 without quantisation; Qwen3-32B likewise). For a smaller model, recompute the axis with `code/assistant-axis/pipeline` or a cheap proxy (see `literature_review.md`).
 
 ## Validation
-All files were loaded with pandas/torch after download; schemas and counts above are from that check. RAID counts are appended below once the stream completes.
+All files were loaded with pandas/torch after download; schemas and counts above are from that check. The RAID file was checked for completeness by the row-count identity above (every domain × generator cell is an exact multiple of the human count).

@@ -1,0 +1,2821 @@
+{
+ "layers": {
+  "1": {
+   "resid_norm": 0.4822840988636017,
+   "dm_norm": 0.05186052620410919,
+   "hape_test_dm": 0.840117361111111,
+   "hape_test_lr": 0.9956124999999999,
+   "cos_dm_lr": 0.28074097633361816,
+   "hape_gen_gpt-4o-2024-08-06": 0.9375833333333332,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9252277777777778,
+   "hape_gen_llama-3-8B-Instruct": 0.7575944444444445,
+   "hape_gen_llama-3-70B-Instruct": 0.7400638888888889,
+   "hape_gen_llama-3-8B": 0.46245555555555556,
+   "hape_gen_llama-3-70B": 0.48033194444444444,
+   "hc3_dm": 0.8511650502433388,
+   "hc3_lr": 0.9681558768950667,
+   "raid_chat_dm": 0.7461326168006526,
+   "raid_nonchat_dm": 0.45187166245081506,
+   "raid_chat_lr": 0.947393102644763,
+   "raid_nonchat_lr": 0.6802452220348512,
+   "mage_dm": 0.4939828125,
+   "mage_lr": 0.550175,
+   "dprime": {
+    "gpt-4o-2024-08-06": 2.4643394947052,
+    "gpt-4o-mini-2024-07-18": 2.4857916831970215,
+    "llama-3-8B-Instruct": 1.1237432956695557,
+    "llama-3-70B-Instruct": 1.0785365104675293,
+    "llama-3-8B": -0.11663130670785904,
+    "llama-3-70B": -0.06581323593854904
+   },
+   "hc3dir_on_hc3_heldout": 0.9676394383950142,
+   "hc3dir_on_hape": 0.7309763888888889,
+   "raiddir_on_hape": 0.8342013888888888,
+   "hapedir_on_hc3_heldout": 0.8500490178915303,
+   "formality_auc_along_ai": 0.8191,
+   "formality_auc_along_formality": 0.9448000000000001,
+   "ai_auc_along_formality": 0.6264256944444445,
+   "cos_with_ai_read": {
+    "ai_lr": 0.28074097633361816,
+    "ai_hc3": 0.45867598056793213,
+    "ai_raid": 0.7496802806854248,
+    "ai_base_gens": -0.13307805359363556,
+    "formality": 0.42952749133110046,
+    "fluency": 0.2687886953353882,
+    "length": 0.09977415204048157,
+    "chat_register": 0.8301911950111389,
+    "write_raw": -0.07632657885551453,
+    "write_chat": 0.6822845339775085,
+    "assistant_axis": 0.08837830275297165,
+    "genre_subspace_frac": 0.23772940039634705
+   },
+   "leave_one_genre_out": {
+    "acad": 0.926675,
+    "blog": 0.8240999999999999,
+    "fic": 0.8759,
+    "news": 0.9427500000000001,
+    "spok": 0.8323749999999999,
+    "tvm": 0.8839750000000001
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.911025,
+     "frac_ai_dir_removed": 0.1844937801361084
+    },
+    "fluency": {
+     "auroc": 0.8925152777777778,
+     "frac_ai_dir_removed": 0.0722474455833435
+    },
+    "length": {
+     "auroc": 0.8372236111111111,
+     "frac_ai_dir_removed": 0.00995492935180664
+    },
+    "chat_register": {
+     "auroc": 0.8270423611111111,
+     "frac_ai_dir_removed": 0.689217209815979
+    },
+    "assistant_axis": {
+     "auroc": 0.8500173611111113,
+     "frac_ai_dir_removed": 0.007810771465301514
+    },
+    "genre": {
+     "auroc": 0.9291208333333333,
+     "frac_ai_dir_removed": 0.23772943019866943
+    },
+    "all": {
+     "auroc": 0.8517819444444444,
+     "frac_ai_dir_removed": 0.7487103939056396
+    }
+   }
+  },
+  "2": {
+   "resid_norm": 0.6962249875068665,
+   "dm_norm": 0.1061970517039299,
+   "hape_test_dm": 0.8878305555555556,
+   "hape_test_lr": 0.9976479166666666,
+   "cos_dm_lr": 0.32202786207199097,
+   "hape_gen_gpt-4o-2024-08-06": 0.9512305555555557,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9412972222222221,
+   "hape_gen_llama-3-8B-Instruct": 0.8385111111111111,
+   "hape_gen_llama-3-70B-Instruct": 0.8202833333333334,
+   "hape_gen_llama-3-8B": 0.5303583333333334,
+   "hape_gen_llama-3-70B": 0.5310680555555556,
+   "hc3_dm": 0.9400931339939078,
+   "hc3_lr": 0.9916691467385597,
+   "raid_chat_dm": 0.8309470756145869,
+   "raid_nonchat_dm": 0.528673060708263,
+   "raid_chat_lr": 0.9670606140044274,
+   "raid_nonchat_lr": 0.7079670812254075,
+   "mage_dm": 0.5200671875,
+   "mage_lr": 0.6419,
+   "dprime": {
+    "gpt-4o-2024-08-06": 2.719296932220459,
+    "gpt-4o-mini-2024-07-18": 2.786095142364502,
+    "llama-3-8B-Instruct": 1.7209060192108154,
+    "llama-3-70B-Instruct": 1.6201515197753906,
+    "llama-3-8B": 0.13186688721179962,
+    "llama-3-70B": 0.12842540442943573
+   },
+   "hc3dir_on_hc3_heldout": 0.9898375407023563,
+   "hc3dir_on_hape": 0.7825347222222223,
+   "raiddir_on_hape": 0.8771604166666666,
+   "hapedir_on_hc3_heldout": 0.9416599558838976,
+   "formality_auc_along_ai": 0.8502777777777778,
+   "formality_auc_along_formality": 0.9555555555555556,
+   "ai_auc_along_formality": 0.6444493055555556,
+   "cos_with_ai_read": {
+    "ai_lr": 0.32202786207199097,
+    "ai_hc3": 0.5406019687652588,
+    "ai_raid": 0.8120140433311462,
+    "ai_base_gens": 0.07436728477478027,
+    "formality": 0.41728949546813965,
+    "fluency": 0.33757027983665466,
+    "length": 0.041078243404626846,
+    "chat_register": 0.867466390132904,
+    "write_raw": 0.1451440006494522,
+    "write_chat": 0.7363264560699463,
+    "assistant_axis": 0.16804440319538116,
+    "genre_subspace_frac": 0.1733757108449936
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9639749999999999,
+    "blog": 0.8614999999999999,
+    "fic": 0.9464750000000001,
+    "news": 0.980225,
+    "spok": 0.9127000000000001,
+    "tvm": 0.92145
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9586847222222221,
+     "frac_ai_dir_removed": 0.17413067817687988
+    },
+    "fluency": {
+     "auroc": 0.9502590277777778,
+     "frac_ai_dir_removed": 0.11395376920700073
+    },
+    "length": {
+     "auroc": 0.887026388888889,
+     "frac_ai_dir_removed": 0.0016875267028808594
+    },
+    "chat_register": {
+     "auroc": 0.8586618055555555,
+     "frac_ai_dir_removed": 0.7524979114532471
+    },
+    "assistant_axis": {
+     "auroc": 0.90544375,
+     "frac_ai_dir_removed": 0.028238952159881592
+    },
+    "genre": {
+     "auroc": 0.9673041666666666,
+     "frac_ai_dir_removed": 0.17337584495544434
+    },
+    "all": {
+     "auroc": 0.8677197916666666,
+     "frac_ai_dir_removed": 0.793675422668457
+    }
+   }
+  },
+  "3": {
+   "resid_norm": 1.096368670463562,
+   "dm_norm": 0.20357449352741241,
+   "hape_test_dm": 0.9541479166666668,
+   "hape_test_lr": 0.9985569444444444,
+   "cos_dm_lr": 0.3346560001373291,
+   "hape_gen_gpt-4o-2024-08-06": 0.9759194444444446,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9730416666666666,
+   "hape_gen_llama-3-8B-Instruct": 0.9405444444444444,
+   "hape_gen_llama-3-70B-Instruct": 0.9270861111111112,
+   "hape_gen_llama-3-8B": 0.6699111111111111,
+   "hape_gen_llama-3-70B": 0.6454458333333334,
+   "hc3_dm": 0.9805876019747207,
+   "hc3_lr": 0.9973565351353244,
+   "raid_chat_dm": 0.9020767796807643,
+   "raid_nonchat_dm": 0.6118685005621136,
+   "raid_chat_lr": 0.9763959279972039,
+   "raid_nonchat_lr": 0.7276946318156268,
+   "mage_dm": 0.5836281249999999,
+   "mage_lr": 0.689675,
+   "dprime": {
+    "gpt-4o-2024-08-06": 3.4500701427459717,
+    "gpt-4o-mini-2024-07-18": 3.5953140258789062,
+    "llama-3-8B-Instruct": 2.847870111465454,
+    "llama-3-70B-Instruct": 2.6205830574035645,
+    "llama-3-8B": 0.6477529406547546,
+    "llama-3-70B": 0.5421260595321655
+   },
+   "hc3dir_on_hc3_heldout": 0.9965862539827037,
+   "hc3dir_on_hape": 0.8894645833333334,
+   "raiddir_on_hape": 0.9453236111111111,
+   "hapedir_on_hc3_heldout": 0.9833076572949127,
+   "formality_auc_along_ai": 0.7735555555555556,
+   "formality_auc_along_formality": 0.9600444444444445,
+   "ai_auc_along_formality": 0.6579729166666666,
+   "cos_with_ai_read": {
+    "ai_lr": 0.3346560001373291,
+    "ai_hc3": 0.6363874673843384,
+    "ai_raid": 0.863435685634613,
+    "ai_base_gens": 0.32996436953544617,
+    "formality": 0.33084428310394287,
+    "fluency": 0.3175516724586487,
+    "length": -0.00018723681569099426,
+    "chat_register": 0.903954267501831,
+    "write_raw": 0.3782527446746826,
+    "write_chat": 0.8226715922355652,
+    "assistant_axis": 0.16324937343597412,
+    "genre_subspace_frac": 0.17964500188827515
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9845499999999999,
+    "blog": 0.9143249999999999,
+    "fic": 0.9878500000000001,
+    "news": 0.9937,
+    "spok": 0.9912,
+    "tvm": 0.9775750000000001
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9826368055555557,
+     "frac_ai_dir_removed": 0.10945796966552734
+    },
+    "fluency": {
+     "auroc": 0.9788722222222223,
+     "frac_ai_dir_removed": 0.10083913803100586
+    },
+    "length": {
+     "auroc": 0.9541527777777777,
+     "frac_ai_dir_removed": 0.0
+    },
+    "chat_register": {
+     "auroc": 0.9132104166666667,
+     "frac_ai_dir_removed": 0.8171334266662598
+    },
+    "assistant_axis": {
+     "auroc": 0.9635572916666667,
+     "frac_ai_dir_removed": 0.02665036916732788
+    },
+    "genre": {
+     "auroc": 0.9837854166666667,
+     "frac_ai_dir_removed": 0.17964506149291992
+    },
+    "all": {
+     "auroc": 0.8923979166666667,
+     "frac_ai_dir_removed": 0.8562703132629395
+    }
+   }
+  },
+  "4": {
+   "resid_norm": 1.5201343297958374,
+   "dm_norm": 0.34341520071029663,
+   "hape_test_dm": 0.9685395833333333,
+   "hape_test_lr": 0.9991708333333333,
+   "cos_dm_lr": 0.3828641176223755,
+   "hape_gen_gpt-4o-2024-08-06": 0.9831777777777778,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9805916666666668,
+   "hape_gen_llama-3-8B-Instruct": 0.9612944444444443,
+   "hape_gen_llama-3-70B-Instruct": 0.9490944444444444,
+   "hape_gen_llama-3-8B": 0.6757361111111111,
+   "hape_gen_llama-3-70B": 0.6540430555555555,
+   "hc3_dm": 0.9883823220475474,
+   "hc3_lr": 0.9991006092223662,
+   "raid_chat_dm": 0.9119021612489805,
+   "raid_nonchat_dm": 0.6265752353850478,
+   "raid_chat_lr": 0.9799399976698124,
+   "raid_nonchat_lr": 0.7352313448566611,
+   "mage_dm": 0.595046875,
+   "mage_lr": 0.693565625,
+   "dprime": {
+    "gpt-4o-2024-08-06": 3.5246500968933105,
+    "gpt-4o-mini-2024-07-18": 3.659691572189331,
+    "llama-3-8B-Instruct": 3.054535388946533,
+    "llama-3-70B-Instruct": 2.8032824993133545,
+    "llama-3-8B": 0.6634508967399597,
+    "llama-3-70B": 0.5728113651275635
+   },
+   "hc3dir_on_hc3_heldout": 0.9980655439235321,
+   "hc3dir_on_hape": 0.9082104166666667,
+   "raiddir_on_hape": 0.9576743055555554,
+   "hapedir_on_hc3_heldout": 0.989574944854872,
+   "formality_auc_along_ai": 0.7387111111111112,
+   "formality_auc_along_formality": 0.9600777777777778,
+   "ai_auc_along_formality": 0.6552430555555556,
+   "cos_with_ai_read": {
+    "ai_lr": 0.38286417722702026,
+    "ai_hc3": 0.6267999410629272,
+    "ai_raid": 0.8685747385025024,
+    "ai_base_gens": 0.3810483515262604,
+    "formality": 0.2728903293609619,
+    "fluency": 0.3542635440826416,
+    "length": -0.003937683999538422,
+    "chat_register": 0.9279866814613342,
+    "write_raw": 0.45287734270095825,
+    "write_chat": 0.8454960584640503,
+    "assistant_axis": 0.11870044469833374,
+    "genre_subspace_frac": 0.24730169773101807
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9919749999999999,
+    "blog": 0.9405749999999999,
+    "fic": 0.9958750000000001,
+    "news": 0.996425,
+    "spok": 0.995175,
+    "tvm": 0.9825
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9864611111111111,
+     "frac_ai_dir_removed": 0.07446914911270142
+    },
+    "fluency": {
+     "auroc": 0.9861333333333333,
+     "frac_ai_dir_removed": 0.12550270557403564
+    },
+    "length": {
+     "auroc": 0.96855625,
+     "frac_ai_dir_removed": 1.5497207641601562e-05
+    },
+    "chat_register": {
+     "auroc": 0.9206152777777779,
+     "frac_ai_dir_removed": 0.8611593246459961
+    },
+    "assistant_axis": {
+     "auroc": 0.9740430555555557,
+     "frac_ai_dir_removed": 0.014089643955230713
+    },
+    "genre": {
+     "auroc": 0.988101388888889,
+     "frac_ai_dir_removed": 0.24730151891708374
+    },
+    "all": {
+     "auroc": 0.8967458333333334,
+     "frac_ai_dir_removed": 0.8898534774780273
+    }
+   }
+  },
+  "5": {
+   "resid_norm": 1.9423655271530151,
+   "dm_norm": 0.510231614112854,
+   "hape_test_dm": 0.9816131944444444,
+   "hape_test_lr": 0.9994847222222223,
+   "cos_dm_lr": 0.37332504987716675,
+   "hape_gen_gpt-4o-2024-08-06": 0.9900277777777777,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9882361111111112,
+   "hape_gen_llama-3-8B-Instruct": 0.9776777777777778,
+   "hape_gen_llama-3-70B-Instruct": 0.9705111111111111,
+   "hape_gen_llama-3-8B": 0.6933027777777778,
+   "hape_gen_llama-3-70B": 0.6722958333333333,
+   "hc3_dm": 0.9770600644235147,
+   "hc3_lr": 0.9984966387731522,
+   "raid_chat_dm": 0.914075061167424,
+   "raid_nonchat_dm": 0.6344430684373243,
+   "raid_chat_lr": 0.9854836595595945,
+   "raid_nonchat_lr": 0.729946599213041,
+   "mage_dm": 0.5894187500000001,
+   "mage_lr": 0.6771546875,
+   "dprime": {
+    "gpt-4o-2024-08-06": 3.5762674808502197,
+    "gpt-4o-mini-2024-07-18": 3.732757329940796,
+    "llama-3-8B-Instruct": 3.2003841400146484,
+    "llama-3-70B-Instruct": 2.9396040439605713,
+    "llama-3-8B": 0.7230172157287598,
+    "llama-3-70B": 0.6395272016525269
+   },
+   "hc3dir_on_hc3_heldout": 0.9975841182031442,
+   "hc3dir_on_hape": 0.9295736111111113,
+   "raiddir_on_hape": 0.9721097222222223,
+   "hapedir_on_hc3_heldout": 0.9795087707013059,
+   "formality_auc_along_ai": 0.6869444444444445,
+   "formality_auc_along_formality": 0.9600000000000001,
+   "ai_auc_along_formality": 0.66081875,
+   "cos_with_ai_read": {
+    "ai_lr": 0.37332504987716675,
+    "ai_hc3": 0.6148072481155396,
+    "ai_raid": 0.8846740126609802,
+    "ai_base_gens": 0.4416813254356384,
+    "formality": 0.23702360689640045,
+    "fluency": 0.3797568678855896,
+    "length": -0.15276826918125153,
+    "chat_register": 0.9411320686340332,
+    "write_raw": 0.5143002271652222,
+    "write_chat": 0.8597759008407593,
+    "assistant_axis": 0.08157818764448166,
+    "genre_subspace_frac": 0.30355843901634216
+   },
+   "leave_one_genre_out": {
+    "acad": 0.99135,
+    "blog": 0.9604249999999999,
+    "fic": 0.999225,
+    "news": 0.9942,
+    "spok": 0.9991249999999999,
+    "tvm": 0.98985
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9904944444444443,
+     "frac_ai_dir_removed": 0.05618011951446533
+    },
+    "fluency": {
+     "auroc": 0.9894284722222222,
+     "frac_ai_dir_removed": 0.14421510696411133
+    },
+    "length": {
+     "auroc": 0.9824555555555555,
+     "frac_ai_dir_removed": 0.023337960243225098
+    },
+    "chat_register": {
+     "auroc": 0.9245305555555554,
+     "frac_ai_dir_removed": 0.8857297301292419
+    },
+    "assistant_axis": {
+     "auroc": 0.9841395833333333,
+     "frac_ai_dir_removed": 0.006654858589172363
+    },
+    "genre": {
+     "auroc": 0.9910229166666669,
+     "frac_ai_dir_removed": 0.3035582900047302
+    },
+    "all": {
+     "auroc": 0.8867312500000001,
+     "frac_ai_dir_removed": 0.9094171524047852
+    }
+   }
+  },
+  "6": {
+   "resid_norm": 2.321512222290039,
+   "dm_norm": 0.609944224357605,
+   "hape_test_dm": 0.9843854166666667,
+   "hape_test_lr": 0.9994513888888887,
+   "cos_dm_lr": 0.3730931282043457,
+   "hape_gen_gpt-4o-2024-08-06": 0.9905111111111111,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9883333333333334,
+   "hape_gen_llama-3-8B-Instruct": 0.9832111111111111,
+   "hape_gen_llama-3-70B-Instruct": 0.9754861111111112,
+   "hape_gen_llama-3-8B": 0.7043777777777778,
+   "hape_gen_llama-3-70B": 0.6790986111111111,
+   "hc3_dm": 0.9760753299954483,
+   "hc3_lr": 0.9983850355379714,
+   "raid_chat_dm": 0.914723872771758,
+   "raid_nonchat_dm": 0.6397971999718943,
+   "raid_chat_lr": 0.9859329488523826,
+   "raid_nonchat_lr": 0.7192506323777403,
+   "mage_dm": 0.588559375,
+   "mage_lr": 0.65763125,
+   "dprime": {
+    "gpt-4o-2024-08-06": 3.631042003631592,
+    "gpt-4o-mini-2024-07-18": 3.785529613494873,
+    "llama-3-8B-Instruct": 3.353367328643799,
+    "llama-3-70B-Instruct": 3.0571417808532715,
+    "llama-3-8B": 0.7702276706695557,
+    "llama-3-70B": 0.6691747307777405
+   },
+   "hc3dir_on_hc3_heldout": 0.9978642204404609,
+   "hc3dir_on_hape": 0.9411361111111111,
+   "raiddir_on_hape": 0.9779291666666666,
+   "hapedir_on_hc3_heldout": 0.9800602219810232,
+   "formality_auc_along_ai": 0.702011111111111,
+   "formality_auc_along_formality": 0.9608888888888889,
+   "ai_auc_along_formality": 0.6626284722222222,
+   "cos_with_ai_read": {
+    "ai_lr": 0.3730931282043457,
+    "ai_hc3": 0.6249179244041443,
+    "ai_raid": 0.8859200477600098,
+    "ai_base_gens": 0.45105987787246704,
+    "formality": 0.22997905313968658,
+    "fluency": 0.3495349586009979,
+    "length": -0.07060731947422028,
+    "chat_register": 0.9414706230163574,
+    "write_raw": 0.5112569332122803,
+    "write_chat": 0.8529115915298462,
+    "assistant_axis": 0.06248877942562103,
+    "genre_subspace_frac": 0.2595164179801941
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9871,
+    "blog": 0.961625,
+    "fic": 0.9992500000000001,
+    "news": 0.9934499999999999,
+    "spok": 0.999625,
+    "tvm": 0.9926250000000001
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9905604166666667,
+     "frac_ai_dir_removed": 0.05289030075073242
+    },
+    "fluency": {
+     "auroc": 0.9884618055555556,
+     "frac_ai_dir_removed": 0.12217444181442261
+    },
+    "length": {
+     "auroc": 0.9844999999999999,
+     "frac_ai_dir_removed": 0.0049852728843688965
+    },
+    "chat_register": {
+     "auroc": 0.9273194444444444,
+     "frac_ai_dir_removed": 0.8863667249679565
+    },
+    "assistant_axis": {
+     "auroc": 0.9858277777777776,
+     "frac_ai_dir_removed": 0.00390470027923584
+    },
+    "genre": {
+     "auroc": 0.9899444444444444,
+     "frac_ai_dir_removed": 0.259516179561615
+    },
+    "all": {
+     "auroc": 0.8837180555555556,
+     "frac_ai_dir_removed": 0.9107303619384766
+    }
+   }
+  },
+  "7": {
+   "resid_norm": 2.6015498638153076,
+   "dm_norm": 0.7277265787124634,
+   "hape_test_dm": 0.9826409722222222,
+   "hape_test_lr": 0.9995159722222222,
+   "cos_dm_lr": 0.3770408630371094,
+   "hape_gen_gpt-4o-2024-08-06": 0.9877250000000001,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9867444444444444,
+   "hape_gen_llama-3-8B-Instruct": 0.9813,
+   "hape_gen_llama-3-70B-Instruct": 0.9747944444444445,
+   "hape_gen_llama-3-8B": 0.695386111111111,
+   "hape_gen_llama-3-70B": 0.6751958333333333,
+   "hc3_dm": 0.9832573264241449,
+   "hc3_lr": 0.9989518049087918,
+   "raid_chat_dm": 0.9316927356402189,
+   "raid_nonchat_dm": 0.6300489214446318,
+   "raid_chat_lr": 0.9869465804497262,
+   "raid_nonchat_lr": 0.7062781056773468,
+   "mage_dm": 0.5818640625,
+   "mage_lr": 0.6381992187500001,
+   "dprime": {
+    "gpt-4o-2024-08-06": 3.280045747756958,
+    "gpt-4o-mini-2024-07-18": 3.4128024578094482,
+    "llama-3-8B-Instruct": 3.18337345123291,
+    "llama-3-70B-Instruct": 2.9076919555664062,
+    "llama-3-8B": 0.744594931602478,
+    "llama-3-70B": 0.6593261361122131
+   },
+   "hc3dir_on_hc3_heldout": 0.9971902244319177,
+   "hc3dir_on_hape": 0.9283840277777778,
+   "raiddir_on_hape": 0.9730854166666667,
+   "hapedir_on_hc3_heldout": 0.9856097475578586,
+   "formality_auc_along_ai": 0.748,
+   "formality_auc_along_formality": 0.9547333333333333,
+   "ai_auc_along_formality": 0.6852715277777778,
+   "cos_with_ai_read": {
+    "ai_lr": 0.3770408630371094,
+    "ai_hc3": 0.6436896920204163,
+    "ai_raid": 0.8818695545196533,
+    "ai_base_gens": 0.4761195182800293,
+    "formality": 0.2780245542526245,
+    "fluency": 0.42677733302116394,
+    "length": -0.12386975437402725,
+    "chat_register": 0.948113203048706,
+    "write_raw": 0.528205156326294,
+    "write_chat": 0.8575038909912109,
+    "assistant_axis": 0.05954131856560707,
+    "genre_subspace_frac": 0.2862461507320404
+   },
+   "leave_one_genre_out": {
+    "acad": 0.997325,
+    "blog": 0.9647000000000001,
+    "fic": 0.9995999999999999,
+    "news": 0.995425,
+    "spok": 0.99985,
+    "tvm": 0.9940500000000001
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9925256944444445,
+     "frac_ai_dir_removed": 0.0772976279258728
+    },
+    "fluency": {
+     "auroc": 0.9909437499999999,
+     "frac_ai_dir_removed": 0.18213891983032227
+    },
+    "length": {
+     "auroc": 0.9827124999999999,
+     "frac_ai_dir_removed": 0.015343725681304932
+    },
+    "chat_register": {
+     "auroc": 0.9250875,
+     "frac_ai_dir_removed": 0.898918628692627
+    },
+    "assistant_axis": {
+     "auroc": 0.9845694444444444,
+     "frac_ai_dir_removed": 0.003545105457305908
+    },
+    "genre": {
+     "auroc": 0.9927041666666667,
+     "frac_ai_dir_removed": 0.286246120929718
+    },
+    "all": {
+     "auroc": 0.8767569444444444,
+     "frac_ai_dir_removed": 0.919791579246521
+    }
+   }
+  },
+  "8": {
+   "resid_norm": 2.9203085899353027,
+   "dm_norm": 0.8375776410102844,
+   "hape_test_dm": 0.9892270833333333,
+   "hape_test_lr": 0.9995145833333333,
+   "cos_dm_lr": 0.3838666081428528,
+   "hape_gen_gpt-4o-2024-08-06": 0.9921888888888889,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9903805555555556,
+   "hape_gen_llama-3-8B-Instruct": 0.9876972222222222,
+   "hape_gen_llama-3-70B-Instruct": 0.9866416666666666,
+   "hape_gen_llama-3-8B": 0.7048888888888889,
+   "hape_gen_llama-3-70B": 0.6889791666666667,
+   "hc3_dm": 0.9757098841076994,
+   "hc3_lr": 0.9993150624978118,
+   "raid_chat_dm": 0.9388718979377839,
+   "raid_nonchat_dm": 0.6055315486228219,
+   "raid_chat_lr": 0.988325760223698,
+   "raid_nonchat_lr": 0.6858303471051153,
+   "mage_dm": 0.566940625,
+   "mage_lr": 0.5907234375,
+   "dprime": {
+    "gpt-4o-2024-08-06": 3.708207845687866,
+    "gpt-4o-mini-2024-07-18": 3.8798210620880127,
+    "llama-3-8B-Instruct": 3.550722599029541,
+    "llama-3-70B-Instruct": 3.280531883239746,
+    "llama-3-8B": 0.7925799489021301,
+    "llama-3-70B": 0.7206153869628906
+   },
+   "hc3dir_on_hc3_heldout": 0.9964899688386262,
+   "hc3dir_on_hape": 0.9371520833333333,
+   "raiddir_on_hape": 0.9808201388888889,
+   "hapedir_on_hc3_heldout": 0.9788522810825953,
+   "formality_auc_along_ai": 0.7106444444444444,
+   "formality_auc_along_formality": 0.9532111111111111,
+   "ai_auc_along_formality": 0.6686923611111111,
+   "cos_with_ai_read": {
+    "ai_lr": 0.3838666081428528,
+    "ai_hc3": 0.5991346836090088,
+    "ai_raid": 0.8705087900161743,
+    "ai_base_gens": 0.4781372547149658,
+    "formality": 0.2310125231742859,
+    "fluency": 0.3565853238105774,
+    "length": -0.13901647925376892,
+    "chat_register": 0.9505751132965088,
+    "write_raw": 0.4824649691581726,
+    "write_chat": 0.8399689793586731,
+    "assistant_axis": 0.07073160260915756,
+    "genre_subspace_frac": 0.2222314476966858
+   },
+   "leave_one_genre_out": {
+    "acad": 0.998175,
+    "blog": 0.96895,
+    "fic": 0.99945,
+    "news": 0.997775,
+    "spok": 0.999575,
+    "tvm": 0.9963250000000001
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9939493055555557,
+     "frac_ai_dir_removed": 0.05336683988571167
+    },
+    "fluency": {
+     "auroc": 0.9918937499999999,
+     "frac_ai_dir_removed": 0.12715309858322144
+    },
+    "length": {
+     "auroc": 0.9895138888888889,
+     "frac_ai_dir_removed": 0.019325733184814453
+    },
+    "chat_register": {
+     "auroc": 0.9140819444444443,
+     "frac_ai_dir_removed": 0.9035931825637817
+    },
+    "assistant_axis": {
+     "auroc": 0.9905118055555555,
+     "frac_ai_dir_removed": 0.005003035068511963
+    },
+    "genre": {
+     "auroc": 0.9939145833333333,
+     "frac_ai_dir_removed": 0.22223156690597534
+    },
+    "all": {
+     "auroc": 0.8657340277777777,
+     "frac_ai_dir_removed": 0.9223252534866333
+    }
+   }
+  },
+  "9": {
+   "resid_norm": 3.2386555671691895,
+   "dm_norm": 0.9716580510139465,
+   "hape_test_dm": 0.9937680555555556,
+   "hape_test_lr": 0.9994513888888888,
+   "cos_dm_lr": 0.3972513675689697,
+   "hape_gen_gpt-4o-2024-08-06": 0.9950972222222222,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9924277777777778,
+   "hape_gen_llama-3-8B-Instruct": 0.9935527777777778,
+   "hape_gen_llama-3-70B-Instruct": 0.9939944444444444,
+   "hape_gen_llama-3-8B": 0.7567138888888889,
+   "hape_gen_llama-3-70B": 0.7318236111111112,
+   "hc3_dm": 0.9797494835614999,
+   "hc3_lr": 0.9998424424915094,
+   "raid_chat_dm": 0.9572891180240009,
+   "raid_nonchat_dm": 0.6168370573355818,
+   "raid_chat_lr": 0.9896568798788302,
+   "raid_nonchat_lr": 0.6798675519955031,
+   "mage_dm": 0.5649421875,
+   "mage_lr": 0.5870656249999999,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.189533233642578,
+    "gpt-4o-mini-2024-07-18": 4.386622905731201,
+    "llama-3-8B-Instruct": 4.260874271392822,
+    "llama-3-70B-Instruct": 3.9388182163238525,
+    "llama-3-8B": 1.0198745727539062,
+    "llama-3-70B": 0.90354323387146
+   },
+   "hc3dir_on_hc3_heldout": 0.9966737859318652,
+   "hc3dir_on_hape": 0.9615361111111111,
+   "raiddir_on_hape": 0.9905111111111111,
+   "hapedir_on_hc3_heldout": 0.9821609887608977,
+   "formality_auc_along_ai": 0.6470333333333333,
+   "formality_auc_along_formality": 0.9544888888888889,
+   "ai_auc_along_formality": 0.64385625,
+   "cos_with_ai_read": {
+    "ai_lr": 0.3972513675689697,
+    "ai_hc3": 0.6262681484222412,
+    "ai_raid": 0.8779963254928589,
+    "ai_base_gens": 0.5250250101089478,
+    "formality": 0.178785040974617,
+    "fluency": 0.3101867437362671,
+    "length": -0.21395274996757507,
+    "chat_register": 0.9560819864273071,
+    "write_raw": 0.5275888442993164,
+    "write_chat": 0.8397769331932068,
+    "assistant_axis": 0.10489845275878906,
+    "genre_subspace_frac": 0.1954129934310913
+   },
+   "leave_one_genre_out": {
+    "acad": 0.999425,
+    "blog": 0.97235,
+    "fic": 1.0,
+    "news": 0.998225,
+    "spok": 0.9999,
+    "tvm": 0.99685
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9952729166666667,
+     "frac_ai_dir_removed": 0.031964123249053955
+    },
+    "fluency": {
+     "auroc": 0.9941506944444445,
+     "frac_ai_dir_removed": 0.09621590375900269
+    },
+    "length": {
+     "auroc": 0.9939875,
+     "frac_ai_dir_removed": 0.045775771141052246
+    },
+    "chat_register": {
+     "auroc": 0.9178729166666666,
+     "frac_ai_dir_removed": 0.9140926599502563
+    },
+    "assistant_axis": {
+     "auroc": 0.9942909722222223,
+     "frac_ai_dir_removed": 0.011003673076629639
+    },
+    "genre": {
+     "auroc": 0.9947652777777778,
+     "frac_ai_dir_removed": 0.19541311264038086
+    },
+    "all": {
+     "auroc": 0.8635493055555556,
+     "frac_ai_dir_removed": 0.9318779110908508
+    }
+   }
+  },
+  "10": {
+   "resid_norm": 3.780921220779419,
+   "dm_norm": 1.1651464700698853,
+   "hape_test_dm": 0.9946145833333332,
+   "hape_test_lr": 0.9994597222222222,
+   "cos_dm_lr": 0.394675612449646,
+   "hape_gen_gpt-4o-2024-08-06": 0.9963333333333333,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9927527777777777,
+   "hape_gen_llama-3-8B-Instruct": 0.994611111111111,
+   "hape_gen_llama-3-70B-Instruct": 0.994761111111111,
+   "hape_gen_llama-3-8B": 0.7584916666666667,
+   "hape_gen_llama-3-70B": 0.7373680555555556,
+   "hc3_dm": 0.9795525366758867,
+   "hc3_lr": 0.9999299744406709,
+   "raid_chat_dm": 0.969226232086683,
+   "raid_nonchat_dm": 0.6302140422990444,
+   "raid_chat_lr": 0.9915152044739601,
+   "raid_nonchat_lr": 0.6842722386172007,
+   "mage_dm": 0.58365,
+   "mage_lr": 0.5951953125,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.816741466522217,
+    "gpt-4o-mini-2024-07-18": 5.043481349945068,
+    "llama-3-8B-Instruct": 4.725205898284912,
+    "llama-3-70B-Instruct": 4.404757022857666,
+    "llama-3-8B": 1.0440982580184937,
+    "llama-3-70B": 0.9418700337409973
+   },
+   "hc3dir_on_hc3_heldout": 0.9982756206015195,
+   "hc3dir_on_hape": 0.9736673611111111,
+   "raiddir_on_hape": 0.9935666666666666,
+   "hapedir_on_hc3_heldout": 0.9815570183116837,
+   "formality_auc_along_ai": 0.6246222222222222,
+   "formality_auc_along_formality": 0.9573666666666667,
+   "ai_auc_along_formality": 0.6351145833333334,
+   "cos_with_ai_read": {
+    "ai_lr": 0.394675612449646,
+    "ai_hc3": 0.604027271270752,
+    "ai_raid": 0.8783872723579407,
+    "ai_base_gens": 0.5010727643966675,
+    "formality": 0.15390723943710327,
+    "fluency": 0.26335227489471436,
+    "length": -0.19120517373085022,
+    "chat_register": 0.9567796587944031,
+    "write_raw": 0.5183820128440857,
+    "write_chat": 0.8521913886070251,
+    "assistant_axis": 0.014937903732061386,
+    "genre_subspace_frac": 0.16568666696548462
+   },
+   "leave_one_genre_out": {
+    "acad": 0.99905,
+    "blog": 0.973875,
+    "fic": 1.0,
+    "news": 0.9991,
+    "spok": 0.9998,
+    "tvm": 0.99605
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.99538125,
+     "frac_ai_dir_removed": 0.023687362670898438
+    },
+    "fluency": {
+     "auroc": 0.9947861111111111,
+     "frac_ai_dir_removed": 0.06935441493988037
+    },
+    "length": {
+     "auroc": 0.9947854166666668,
+     "frac_ai_dir_removed": 0.03655940294265747
+    },
+    "chat_register": {
+     "auroc": 0.9185361111111111,
+     "frac_ai_dir_removed": 0.9154274463653564
+    },
+    "assistant_axis": {
+     "auroc": 0.9946611111111111,
+     "frac_ai_dir_removed": 0.0002231597900390625
+    },
+    "genre": {
+     "auroc": 0.9949347222222222,
+     "frac_ai_dir_removed": 0.1656867265701294
+    },
+    "all": {
+     "auroc": 0.86183125,
+     "frac_ai_dir_removed": 0.9279053807258606
+    }
+   }
+  },
+  "11": {
+   "resid_norm": 3.860105514526367,
+   "dm_norm": 1.24219810962677,
+   "hape_test_dm": 0.9950541666666667,
+   "hape_test_lr": 0.9995472222222221,
+   "cos_dm_lr": 0.38163071870803833,
+   "hape_gen_gpt-4o-2024-08-06": 0.9964611111111111,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9928472222222222,
+   "hape_gen_llama-3-8B-Instruct": 0.994975,
+   "hape_gen_llama-3-70B-Instruct": 0.9959333333333333,
+   "hape_gen_llama-3-8B": 0.7626583333333333,
+   "hape_gen_llama-3-70B": 0.7419875,
+   "hc3_dm": 0.9859533104583174,
+   "hc3_lr": 0.9998665137775289,
+   "raid_chat_dm": 0.9729341430735174,
+   "raid_nonchat_dm": 0.6309021922428331,
+   "raid_chat_lr": 0.989261476173832,
+   "raid_nonchat_lr": 0.6672691821247893,
+   "mage_dm": 0.5692124999999999,
+   "mage_lr": 0.5756171875,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.573960304260254,
+    "gpt-4o-mini-2024-07-18": 4.788312911987305,
+    "llama-3-8B-Instruct": 4.709836006164551,
+    "llama-3-70B-Instruct": 4.380457878112793,
+    "llama-3-8B": 1.0798882246017456,
+    "llama-3-70B": 0.9633390307426453
+   },
+   "hc3dir_on_hc3_heldout": 0.9979517523896223,
+   "hc3dir_on_hape": 0.9736625000000001,
+   "raiddir_on_hape": 0.9932298611111111,
+   "hapedir_on_hc3_heldout": 0.9874391652953327,
+   "formality_auc_along_ai": 0.6664555555555556,
+   "formality_auc_along_formality": 0.9554444444444444,
+   "ai_auc_along_formality": 0.6625909722222222,
+   "cos_with_ai_read": {
+    "ai_lr": 0.38163071870803833,
+    "ai_hc3": 0.6417754292488098,
+    "ai_raid": 0.8830986022949219,
+    "ai_base_gens": 0.5432764887809753,
+    "formality": 0.18923413753509521,
+    "fluency": 0.31644243001937866,
+    "length": -0.14250829815864563,
+    "chat_register": 0.9597282409667969,
+    "write_raw": 0.5575881004333496,
+    "write_chat": 0.8523117303848267,
+    "assistant_axis": 0.023088989779353142,
+    "genre_subspace_frac": 0.1934744119644165
+   },
+   "leave_one_genre_out": {
+    "acad": 0.999675,
+    "blog": 0.977575,
+    "fic": 0.99995,
+    "news": 0.9995499999999999,
+    "spok": 0.9999,
+    "tvm": 0.996175
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9961486111111112,
+     "frac_ai_dir_removed": 0.03580957651138306
+    },
+    "fluency": {
+     "auroc": 0.995407638888889,
+     "frac_ai_dir_removed": 0.10013586282730103
+    },
+    "length": {
+     "auroc": 0.9951944444444444,
+     "frac_ai_dir_removed": 0.020308732986450195
+    },
+    "chat_register": {
+     "auroc": 0.9206020833333333,
+     "frac_ai_dir_removed": 0.9210784435272217
+    },
+    "assistant_axis": {
+     "auroc": 0.995125,
+     "frac_ai_dir_removed": 0.0005331635475158691
+    },
+    "genre": {
+     "auroc": 0.9955944444444446,
+     "frac_ai_dir_removed": 0.19347447156906128
+    },
+    "all": {
+     "auroc": 0.8618798611111111,
+     "frac_ai_dir_removed": 0.9327277541160583
+    }
+   }
+  },
+  "12": {
+   "resid_norm": 3.996232032775879,
+   "dm_norm": 1.304620385169983,
+   "hape_test_dm": 0.9955986111111111,
+   "hape_test_lr": 0.9995159722222222,
+   "cos_dm_lr": 0.3906620740890503,
+   "hape_gen_gpt-4o-2024-08-06": 0.9971222222222222,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9933527777777778,
+   "hape_gen_llama-3-8B-Instruct": 0.9951083333333334,
+   "hape_gen_llama-3-70B-Instruct": 0.9968111111111111,
+   "hape_gen_llama-3-8B": 0.7748416666666667,
+   "hape_gen_llama-3-70B": 0.7496513888888889,
+   "hc3_dm": 0.9895836980497882,
+   "hc3_lr": 0.9998949616610062,
+   "raid_chat_dm": 0.9728758883840148,
+   "raid_nonchat_dm": 0.6401788223721192,
+   "raid_chat_lr": 0.9898833449842712,
+   "raid_nonchat_lr": 0.6975899381675099,
+   "mage_dm": 0.602065625,
+   "mage_lr": 0.6083109375,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.667695045471191,
+    "gpt-4o-mini-2024-07-18": 4.831089973449707,
+    "llama-3-8B-Instruct": 4.688265800476074,
+    "llama-3-70B-Instruct": 4.3751020431518555,
+    "llama-3-8B": 1.1154446601867676,
+    "llama-3-70B": 0.9944174885749817
+   },
+   "hc3dir_on_hc3_heldout": 0.9981968418472743,
+   "hc3dir_on_hape": 0.9708395833333334,
+   "raiddir_on_hape": 0.9927048611111111,
+   "hapedir_on_hc3_heldout": 0.9899075662616855,
+   "formality_auc_along_ai": 0.6223222222222222,
+   "formality_auc_along_formality": 0.9552444444444443,
+   "ai_auc_along_formality": 0.6324173611111111,
+   "cos_with_ai_read": {
+    "ai_lr": 0.3906620740890503,
+    "ai_hc3": 0.65361487865448,
+    "ai_raid": 0.87980055809021,
+    "ai_base_gens": 0.5542691349983215,
+    "formality": 0.14903393387794495,
+    "fluency": 0.31742703914642334,
+    "length": -0.08668817579746246,
+    "chat_register": 0.9575122594833374,
+    "write_raw": 0.5517748594284058,
+    "write_chat": 0.8426352739334106,
+    "assistant_axis": -0.00795065425336361,
+    "genre_subspace_frac": 0.1859252005815506
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9993,
+    "blog": 0.9808749999999999,
+    "fic": 0.999975,
+    "news": 0.999875,
+    "spok": 0.9999,
+    "tvm": 0.9967
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9964902777777778,
+     "frac_ai_dir_removed": 0.022211074829101562
+    },
+    "fluency": {
+     "auroc": 0.9959138888888889,
+     "frac_ai_dir_removed": 0.10075986385345459
+    },
+    "length": {
+     "auroc": 0.9956680555555555,
+     "frac_ai_dir_removed": 0.007514834403991699
+    },
+    "chat_register": {
+     "auroc": 0.9181722222222223,
+     "frac_ai_dir_removed": 0.9168296456336975
+    },
+    "assistant_axis": {
+     "auroc": 0.9955680555555556,
+     "frac_ai_dir_removed": 6.318092346191406e-05
+    },
+    "genre": {
+     "auroc": 0.9960805555555555,
+     "frac_ai_dir_removed": 0.1859251856803894
+    },
+    "all": {
+     "auroc": 0.8626097222222222,
+     "frac_ai_dir_removed": 0.9288240671157837
+    }
+   }
+  },
+  "13": {
+   "resid_norm": 4.635506629943848,
+   "dm_norm": 1.3578243255615234,
+   "hape_test_dm": 0.9947555555555555,
+   "hape_test_lr": 0.999307638888889,
+   "cos_dm_lr": 0.39152342081069946,
+   "hape_gen_gpt-4o-2024-08-06": 0.9965555555555555,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9924944444444443,
+   "hape_gen_llama-3-8B-Instruct": 0.9938472222222223,
+   "hape_gen_llama-3-70B-Instruct": 0.996125,
+   "hape_gen_llama-3-8B": 0.7540111111111111,
+   "hape_gen_llama-3-70B": 0.7380597222222223,
+   "hc3_dm": 0.9867367214033124,
+   "hc3_lr": 0.9999321627393998,
+   "raid_chat_dm": 0.9723312070371664,
+   "raid_nonchat_dm": 0.6321045882518269,
+   "raid_chat_lr": 0.9903646743562857,
+   "raid_nonchat_lr": 0.7070079749859471,
+   "mage_dm": 0.590571875,
+   "mage_lr": 0.6198359375,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.457494258880615,
+    "gpt-4o-mini-2024-07-18": 4.600405216217041,
+    "llama-3-8B-Instruct": 4.679905414581299,
+    "llama-3-70B-Instruct": 4.403250694274902,
+    "llama-3-8B": 1.0302910804748535,
+    "llama-3-70B": 0.9445589780807495
+   },
+   "hc3dir_on_hc3_heldout": 0.9967000455166136,
+   "hc3dir_on_hape": 0.9641680555555556,
+   "raiddir_on_hape": 0.9916451388888888,
+   "hapedir_on_hc3_heldout": 0.9870802843037709,
+   "formality_auc_along_ai": 0.6442888888888889,
+   "formality_auc_along_formality": 0.9546333333333333,
+   "ai_auc_along_formality": 0.6262486111111112,
+   "cos_with_ai_read": {
+    "ai_lr": 0.39152342081069946,
+    "ai_hc3": 0.6325510740280151,
+    "ai_raid": 0.8681937456130981,
+    "ai_base_gens": 0.5418383479118347,
+    "formality": 0.15357756614685059,
+    "fluency": 0.3066016435623169,
+    "length": -0.19685064256191254,
+    "chat_register": 0.9556707143783569,
+    "write_raw": 0.5274381637573242,
+    "write_chat": 0.8122169375419617,
+    "assistant_axis": 0.06912302225828171,
+    "genre_subspace_frac": 0.17867976427078247
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9989999999999999,
+    "blog": 0.9767499999999999,
+    "fic": 1.0,
+    "news": 0.99985,
+    "spok": 0.999575,
+    "tvm": 0.99675
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9957340277777778,
+     "frac_ai_dir_removed": 0.0235862135887146
+    },
+    "fluency": {
+     "auroc": 0.9948840277777777,
+     "frac_ai_dir_removed": 0.09400463104248047
+    },
+    "length": {
+     "auroc": 0.994886111111111,
+     "frac_ai_dir_removed": 0.03875023126602173
+    },
+    "chat_register": {
+     "auroc": 0.9007305555555555,
+     "frac_ai_dir_removed": 0.9133065342903137
+    },
+    "assistant_axis": {
+     "auroc": 0.9949763888888888,
+     "frac_ai_dir_removed": 0.0047779083251953125
+    },
+    "genre": {
+     "auroc": 0.9956701388888888,
+     "frac_ai_dir_removed": 0.17867982387542725
+    },
+    "all": {
+     "auroc": 0.8502388888888889,
+     "frac_ai_dir_removed": 0.9243225455284119
+    }
+   }
+  },
+  "14": {
+   "resid_norm": 5.148533344268799,
+   "dm_norm": 1.575099229812622,
+   "hape_test_dm": 0.9951770833333334,
+   "hape_test_lr": 0.9991826388888888,
+   "cos_dm_lr": 0.40790849924087524,
+   "hape_gen_gpt-4o-2024-08-06": 0.9972555555555556,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9929527777777778,
+   "hape_gen_llama-3-8B-Instruct": 0.9946055555555554,
+   "hape_gen_llama-3-70B-Instruct": 0.9958944444444445,
+   "hape_gen_llama-3-8B": 0.7211305555555556,
+   "hape_gen_llama-3-70B": 0.7011069444444444,
+   "hc3_dm": 0.990174538706628,
+   "hc3_lr": 0.9998905850635482,
+   "raid_chat_dm": 0.9733506641034603,
+   "raid_nonchat_dm": 0.6671550028105677,
+   "raid_chat_lr": 0.9921487242222999,
+   "raid_nonchat_lr": 0.7146439362001125,
+   "mage_dm": 0.6315,
+   "mage_lr": 0.6130625000000001,
+   "dprime": {
+    "gpt-4o-2024-08-06": 5.371366024017334,
+    "gpt-4o-mini-2024-07-18": 5.637971878051758,
+    "llama-3-8B-Instruct": 5.200740337371826,
+    "llama-3-70B-Instruct": 4.780775547027588,
+    "llama-3-8B": 0.919336199760437,
+    "llama-3-70B": 0.8050534129142761
+   },
+   "hc3dir_on_hc3_heldout": 0.9983543993557649,
+   "hc3dir_on_hape": 0.9668034722222222,
+   "raiddir_on_hape": 0.9924034722222222,
+   "hapedir_on_hc3_heldout": 0.9898988130667693,
+   "formality_auc_along_ai": 0.6052222222222222,
+   "formality_auc_along_formality": 0.9560444444444444,
+   "ai_auc_along_formality": 0.5849833333333333,
+   "cos_with_ai_read": {
+    "ai_lr": 0.40790849924087524,
+    "ai_hc3": 0.6009185910224915,
+    "ai_raid": 0.8594086766242981,
+    "ai_base_gens": 0.45106828212738037,
+    "formality": 0.1033901572227478,
+    "fluency": 0.22468352317810059,
+    "length": -0.2094765603542328,
+    "chat_register": 0.9512796401977539,
+    "write_raw": 0.48194828629493713,
+    "write_chat": 0.7862369418144226,
+    "assistant_axis": 0.0009724944829940796,
+    "genre_subspace_frac": 0.08660741150379181
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9992749999999999,
+    "blog": 0.9794750000000001,
+    "fic": 0.999925,
+    "news": 0.999775,
+    "spok": 0.999625,
+    "tvm": 0.99465
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9958750000000001,
+     "frac_ai_dir_removed": 0.010689496994018555
+    },
+    "fluency": {
+     "auroc": 0.9959145833333334,
+     "frac_ai_dir_removed": 0.050482749938964844
+    },
+    "length": {
+     "auroc": 0.9953715277777777,
+     "frac_ai_dir_removed": 0.043880343437194824
+    },
+    "chat_register": {
+     "auroc": 0.8467590277777778,
+     "frac_ai_dir_removed": 0.904932975769043
+    },
+    "assistant_axis": {
+     "auroc": 0.9951784722222222,
+     "frac_ai_dir_removed": 9.5367431640625e-07
+    },
+    "genre": {
+     "auroc": 0.9957395833333333,
+     "frac_ai_dir_removed": 0.08660733699798584
+    },
+    "all": {
+     "auroc": 0.8202215277777777,
+     "frac_ai_dir_removed": 0.9145693182945251
+    }
+   }
+  },
+  "15": {
+   "resid_norm": 5.488320350646973,
+   "dm_norm": 1.7009170055389404,
+   "hape_test_dm": 0.993907638888889,
+   "hape_test_lr": 0.9992576388888889,
+   "cos_dm_lr": 0.3819570541381836,
+   "hape_gen_gpt-4o-2024-08-06": 0.9963083333333335,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9920444444444444,
+   "hape_gen_llama-3-8B-Instruct": 0.9933277777777778,
+   "hape_gen_llama-3-70B-Instruct": 0.99395,
+   "hape_gen_llama-3-8B": 0.7242166666666667,
+   "hape_gen_llama-3-70B": 0.7017680555555555,
+   "hc3_dm": 0.9894042575540073,
+   "hc3_lr": 0.9997942999194707,
+   "raid_chat_dm": 0.9661176162181055,
+   "raid_nonchat_dm": 0.6767772449409781,
+   "raid_chat_lr": 0.9909545030874984,
+   "raid_nonchat_lr": 0.7038144673974143,
+   "mage_dm": 0.655225,
+   "mage_lr": 0.600646875,
+   "dprime": {
+    "gpt-4o-2024-08-06": 5.190662384033203,
+    "gpt-4o-mini-2024-07-18": 5.430509090423584,
+    "llama-3-8B-Instruct": 4.993887901306152,
+    "llama-3-70B-Instruct": 4.611848831176758,
+    "llama-3-8B": 0.9265444874763489,
+    "llama-3-70B": 0.8102554082870483
+   },
+   "hc3dir_on_hc3_heldout": 0.9980655439235321,
+   "hc3dir_on_hape": 0.9765340277777779,
+   "raiddir_on_hape": 0.9916850694444445,
+   "hapedir_on_hc3_heldout": 0.9891372851090648,
+   "formality_auc_along_ai": 0.5419111111111111,
+   "formality_auc_along_formality": 0.9526333333333333,
+   "ai_auc_along_formality": 0.5477618055555555,
+   "cos_with_ai_read": {
+    "ai_lr": 0.3819570541381836,
+    "ai_hc3": 0.6303811073303223,
+    "ai_raid": 0.8737567663192749,
+    "ai_base_gens": 0.4863167405128479,
+    "formality": 0.06098172813653946,
+    "fluency": 0.20800474286079407,
+    "length": -0.23725849390029907,
+    "chat_register": 0.9593204855918884,
+    "write_raw": 0.5160927772521973,
+    "write_chat": 0.7998618483543396,
+    "assistant_axis": 0.06354314833879471,
+    "genre_subspace_frac": 0.10076761245727539
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9987499999999999,
+    "blog": 0.972125,
+    "fic": 0.999725,
+    "news": 0.999575,
+    "spok": 0.999225,
+    "tvm": 0.9951
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9943402777777779,
+     "frac_ai_dir_removed": 0.003718733787536621
+    },
+    "fluency": {
+     "auroc": 0.99446875,
+     "frac_ai_dir_removed": 0.0432659387588501
+    },
+    "length": {
+     "auroc": 0.9942708333333334,
+     "frac_ai_dir_removed": 0.05629169940948486
+    },
+    "chat_register": {
+     "auroc": 0.86474375,
+     "frac_ai_dir_removed": 0.9202958345413208
+    },
+    "assistant_axis": {
+     "auroc": 0.9940631944444445,
+     "frac_ai_dir_removed": 0.004037678241729736
+    },
+    "genre": {
+     "auroc": 0.9944055555555554,
+     "frac_ai_dir_removed": 0.10076755285263062
+    },
+    "all": {
+     "auroc": 0.8389631944444446,
+     "frac_ai_dir_removed": 0.9279800057411194
+    }
+   }
+  },
+  "16": {
+   "resid_norm": 6.100252628326416,
+   "dm_norm": 1.7600287199020386,
+   "hape_test_dm": 0.9928923611111111,
+   "hape_test_lr": 0.9993243055555556,
+   "cos_dm_lr": 0.43615806102752686,
+   "hape_gen_gpt-4o-2024-08-06": 0.996611111111111,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9918638888888889,
+   "hape_gen_llama-3-8B-Instruct": 0.9916111111111111,
+   "hape_gen_llama-3-70B-Instruct": 0.9914833333333333,
+   "hape_gen_llama-3-8B": 0.6912166666666666,
+   "hape_gen_llama-3-70B": 0.6755569444444445,
+   "hc3_dm": 0.9938552571688666,
+   "hc3_lr": 0.9997439690487028,
+   "raid_chat_dm": 0.9585729057439125,
+   "raid_nonchat_dm": 0.6520271219786397,
+   "raid_chat_lr": 0.9911933473144587,
+   "raid_nonchat_lr": 0.6875245924676785,
+   "mage_dm": 0.6134796875,
+   "mage_lr": 0.6003890625,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.984699726104736,
+    "gpt-4o-mini-2024-07-18": 5.1935858726501465,
+    "llama-3-8B-Instruct": 4.699217319488525,
+    "llama-3-70B-Instruct": 4.3526787757873535,
+    "llama-3-8B": 0.7857747077941895,
+    "llama-3-70B": 0.7003483176231384
+   },
+   "hc3dir_on_hc3_heldout": 0.999457301915199,
+   "hc3dir_on_hape": 0.942988888888889,
+   "raiddir_on_hape": 0.9854916666666668,
+   "hapedir_on_hc3_heldout": 0.9936889464654598,
+   "formality_auc_along_ai": 0.6598111111111111,
+   "formality_auc_along_formality": 0.9560555555555555,
+   "ai_auc_along_formality": 0.6028743055555555,
+   "cos_with_ai_read": {
+    "ai_lr": 0.43615806102752686,
+    "ai_hc3": 0.5764983892440796,
+    "ai_raid": 0.8461197018623352,
+    "ai_base_gens": 0.4034383296966553,
+    "formality": 0.1452953964471817,
+    "fluency": 0.2577270269393921,
+    "length": -0.1668931245803833,
+    "chat_register": 0.9479060173034668,
+    "write_raw": 0.4575984477996826,
+    "write_chat": 0.7715494632720947,
+    "assistant_axis": -0.015154805034399033,
+    "genre_subspace_frac": 0.09655524790287018
+   },
+   "leave_one_genre_out": {
+    "acad": 0.999325,
+    "blog": 0.975325,
+    "fic": 0.999525,
+    "news": 0.99905,
+    "spok": 0.999125,
+    "tvm": 0.9948750000000001
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9948215277777777,
+     "frac_ai_dir_removed": 0.021110713481903076
+    },
+    "fluency": {
+     "auroc": 0.995063888888889,
+     "frac_ai_dir_removed": 0.06642311811447144
+    },
+    "length": {
+     "auroc": 0.9933916666666667,
+     "frac_ai_dir_removed": 0.02785336971282959
+    },
+    "chat_register": {
+     "auroc": 0.8288430555555556,
+     "frac_ai_dir_removed": 0.8985259532928467
+    },
+    "assistant_axis": {
+     "auroc": 0.992775,
+     "frac_ai_dir_removed": 0.0002295970916748047
+    },
+    "genre": {
+     "auroc": 0.995257638888889,
+     "frac_ai_dir_removed": 0.09655529260635376
+    },
+    "all": {
+     "auroc": 0.8273395833333332,
+     "frac_ai_dir_removed": 0.9076923131942749
+    }
+   }
+  },
+  "17": {
+   "resid_norm": 7.1208295822143555,
+   "dm_norm": 2.0489397048950195,
+   "hape_test_dm": 0.9898861111111112,
+   "hape_test_lr": 0.999313888888889,
+   "cos_dm_lr": 0.40798091888427734,
+   "hape_gen_gpt-4o-2024-08-06": 0.9947944444444444,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9902944444444445,
+   "hape_gen_llama-3-8B-Instruct": 0.9887138888888888,
+   "hape_gen_llama-3-70B-Instruct": 0.9857416666666667,
+   "hape_gen_llama-3-8B": 0.6778472222222223,
+   "hape_gen_llama-3-70B": 0.6590402777777778,
+   "hc3_dm": 0.9934919995798466,
+   "hc3_lr": 0.9994660551101151,
+   "raid_chat_dm": 0.9431062856809974,
+   "raid_nonchat_dm": 0.6521544758291175,
+   "raid_chat_lr": 0.989846935803332,
+   "raid_nonchat_lr": 0.6843899311410905,
+   "mage_dm": 0.627140625,
+   "mage_lr": 0.5846984375,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.5793776512146,
+    "gpt-4o-mini-2024-07-18": 4.764989852905273,
+    "llama-3-8B-Instruct": 4.286989212036133,
+    "llama-3-70B-Instruct": 3.938894033432007,
+    "llama-3-8B": 0.7137513756752014,
+    "llama-3-70B": 0.6228491067886353
+   },
+   "hc3dir_on_hc3_heldout": 0.9994835614999474,
+   "hc3dir_on_hape": 0.940586111111111,
+   "raiddir_on_hape": 0.9808076388888889,
+   "hapedir_on_hc3_heldout": 0.9933825846433949,
+   "formality_auc_along_ai": 0.6748222222222222,
+   "formality_auc_along_formality": 0.9535777777777779,
+   "ai_auc_along_formality": 0.609117361111111,
+   "cos_with_ai_read": {
+    "ai_lr": 0.40798091888427734,
+    "ai_hc3": 0.5873110294342041,
+    "ai_raid": 0.8574544191360474,
+    "ai_base_gens": 0.41042590141296387,
+    "formality": 0.15453462302684784,
+    "fluency": 0.27339690923690796,
+    "length": -0.19944509863853455,
+    "chat_register": 0.9525377154350281,
+    "write_raw": 0.47539323568344116,
+    "write_chat": 0.756873607635498,
+    "assistant_axis": 0.00123555026948452,
+    "genre_subspace_frac": 0.11665437370538712
+   },
+   "leave_one_genre_out": {
+    "acad": 0.99825,
+    "blog": 0.9692000000000001,
+    "fic": 0.9991749999999999,
+    "news": 0.99895,
+    "spok": 0.9990000000000001,
+    "tvm": 0.9937250000000001
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9927833333333334,
+     "frac_ai_dir_removed": 0.02388101816177368
+    },
+    "fluency": {
+     "auroc": 0.9934937500000002,
+     "frac_ai_dir_removed": 0.0747460126876831
+    },
+    "length": {
+     "auroc": 0.99125625,
+     "frac_ai_dir_removed": 0.03977835178375244
+    },
+    "chat_register": {
+     "auroc": 0.8316548611111112,
+     "frac_ai_dir_removed": 0.9073283672332764
+    },
+    "assistant_axis": {
+     "auroc": 0.9899055555555555,
+     "frac_ai_dir_removed": 1.6689300537109375e-06
+    },
+    "genre": {
+     "auroc": 0.9945194444444444,
+     "frac_ai_dir_removed": 0.11665433645248413
+    },
+    "all": {
+     "auroc": 0.8291326388888889,
+     "frac_ai_dir_removed": 0.9139636754989624
+    }
+   }
+  },
+  "18": {
+   "resid_norm": 7.758479118347168,
+   "dm_norm": 2.4447243213653564,
+   "hape_test_dm": 0.9906458333333332,
+   "hape_test_lr": 0.9993958333333334,
+   "cos_dm_lr": 0.4276885390281677,
+   "hape_gen_gpt-4o-2024-08-06": 0.995425,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9912749999999999,
+   "hape_gen_llama-3-8B-Instruct": 0.9893611111111111,
+   "hape_gen_llama-3-70B-Instruct": 0.9865222222222221,
+   "hape_gen_llama-3-8B": 0.6754055555555556,
+   "hape_gen_llama-3-70B": 0.6585402777777778,
+   "hc3_dm": 0.9982340429256679,
+   "hc3_lr": 0.9993106859003537,
+   "raid_chat_dm": 0.9549152394267738,
+   "raid_nonchat_dm": 0.6509213392355255,
+   "raid_chat_lr": 0.9902365140393803,
+   "raid_nonchat_lr": 0.7057221402473299,
+   "mage_dm": 0.60554375,
+   "mage_lr": 0.59871015625,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.519331455230713,
+    "gpt-4o-mini-2024-07-18": 4.682339191436768,
+    "llama-3-8B-Instruct": 4.1009626388549805,
+    "llama-3-70B-Instruct": 3.8054282665252686,
+    "llama-3-8B": 0.680910587310791,
+    "llama-3-70B": 0.6039270758628845
+   },
+   "hc3dir_on_hc3_heldout": 0.9997198977626833,
+   "hc3dir_on_hape": 0.9363152777777777,
+   "raiddir_on_hape": 0.9774409722222221,
+   "hapedir_on_hc3_heldout": 0.9973477819404083,
+   "formality_auc_along_ai": 0.7290333333333333,
+   "formality_auc_along_formality": 0.9561888888888889,
+   "ai_auc_along_formality": 0.6365909722222223,
+   "cos_with_ai_read": {
+    "ai_lr": 0.4276885390281677,
+    "ai_hc3": 0.5815260410308838,
+    "ai_raid": 0.8402289152145386,
+    "ai_base_gens": 0.4051663875579834,
+    "formality": 0.1980682760477066,
+    "fluency": 0.30821704864501953,
+    "length": -0.16167746484279633,
+    "chat_register": 0.945440948009491,
+    "write_raw": 0.4528825283050537,
+    "write_chat": 0.7497187852859497,
+    "assistant_axis": -0.021969854831695557,
+    "genre_subspace_frac": 0.106751948595047
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9991,
+    "blog": 0.9778,
+    "fic": 0.9991249999999999,
+    "news": 0.999225,
+    "spok": 0.9994,
+    "tvm": 0.995275
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9945694444444444,
+     "frac_ai_dir_removed": 0.03923112154006958
+    },
+    "fluency": {
+     "auroc": 0.9952770833333333,
+     "frac_ai_dir_removed": 0.09499788284301758
+    },
+    "length": {
+     "auroc": 0.9917118055555556,
+     "frac_ai_dir_removed": 0.02613985538482666
+    },
+    "chat_register": {
+     "auroc": 0.8116583333333333,
+     "frac_ai_dir_removed": 0.8938586711883545
+    },
+    "assistant_axis": {
+     "auroc": 0.9902708333333334,
+     "frac_ai_dir_removed": 0.00048285722732543945
+    },
+    "genre": {
+     "auroc": 0.9959708333333335,
+     "frac_ai_dir_removed": 0.10675215721130371
+    },
+    "all": {
+     "auroc": 0.8221458333333334,
+     "frac_ai_dir_removed": 0.9062670469284058
+    }
+   }
+  },
+  "19": {
+   "resid_norm": 8.757811546325684,
+   "dm_norm": 2.5922555923461914,
+   "hape_test_dm": 0.9893763888888889,
+   "hape_test_lr": 0.9994430555555555,
+   "cos_dm_lr": 0.4356154501438141,
+   "hape_gen_gpt-4o-2024-08-06": 0.9958555555555555,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9915777777777777,
+   "hape_gen_llama-3-8B-Instruct": 0.986211111111111,
+   "hape_gen_llama-3-70B-Instruct": 0.9838611111111111,
+   "hape_gen_llama-3-8B": 0.6442027777777778,
+   "hape_gen_llama-3-70B": 0.6333569444444445,
+   "hc3_dm": 0.9981290045866741,
+   "hc3_lr": 0.9994135359406184,
+   "raid_chat_dm": 0.9512801468018175,
+   "raid_nonchat_dm": 0.6230817875210792,
+   "raid_chat_lr": 0.9893656064313178,
+   "raid_nonchat_lr": 0.6893795671725689,
+   "mage_dm": 0.56874375,
+   "mage_lr": 0.584740625,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.4928388595581055,
+    "gpt-4o-mini-2024-07-18": 4.639754772186279,
+    "llama-3-8B-Instruct": 3.864145040512085,
+    "llama-3-70B-Instruct": 3.6005280017852783,
+    "llama-3-8B": 0.5643540620803833,
+    "llama-3-70B": 0.515791654586792
+   },
+   "hc3dir_on_hc3_heldout": 0.999754910542348,
+   "hc3dir_on_hape": 0.93058125,
+   "raiddir_on_hape": 0.9787013888888889,
+   "hapedir_on_hc3_heldout": 0.9975753650082281,
+   "formality_auc_along_ai": 0.7527333333333334,
+   "formality_auc_along_formality": 0.9547888888888889,
+   "ai_auc_along_formality": 0.6273145833333333,
+   "cos_with_ai_read": {
+    "ai_lr": 0.4356154501438141,
+    "ai_hc3": 0.5487788915634155,
+    "ai_raid": 0.8212181925773621,
+    "ai_base_gens": 0.3530210256576538,
+    "formality": 0.20397236943244934,
+    "fluency": 0.2791725695133209,
+    "length": -0.1210310161113739,
+    "chat_register": 0.9428609609603882,
+    "write_raw": 0.40536177158355713,
+    "write_chat": 0.7274833917617798,
+    "assistant_axis": -0.09016826748847961,
+    "genre_subspace_frac": 0.10255927592515945
+   },
+   "leave_one_genre_out": {
+    "acad": 0.998925,
+    "blog": 0.971025,
+    "fic": 0.997625,
+    "news": 0.9989,
+    "spok": 0.9986750000000001,
+    "tvm": 0.9934249999999999
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9939083333333334,
+     "frac_ai_dir_removed": 0.041604816913604736
+    },
+    "fluency": {
+     "auroc": 0.9934673611111111,
+     "frac_ai_dir_removed": 0.07793742418289185
+    },
+    "length": {
+     "auroc": 0.9903062499999999,
+     "frac_ai_dir_removed": 0.014648497104644775
+    },
+    "chat_register": {
+     "auroc": 0.8067791666666667,
+     "frac_ai_dir_removed": 0.8889870047569275
+    },
+    "assistant_axis": {
+     "auroc": 0.9875090277777778,
+     "frac_ai_dir_removed": 0.008130431175231934
+    },
+    "genre": {
+     "auroc": 0.9944256944444445,
+     "frac_ai_dir_removed": 0.10255956649780273
+    },
+    "all": {
+     "auroc": 0.8148565972222224,
+     "frac_ai_dir_removed": 0.9016107320785522
+    }
+   }
+  },
+  "20": {
+   "resid_norm": 9.737332344055176,
+   "dm_norm": 2.9172117710113525,
+   "hape_test_dm": 0.9893472222222223,
+   "hape_test_lr": 0.9994840277777778,
+   "cos_dm_lr": 0.43421342968940735,
+   "hape_gen_gpt-4o-2024-08-06": 0.996275,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9919527777777777,
+   "hape_gen_llama-3-8B-Instruct": 0.9853722222222223,
+   "hape_gen_llama-3-70B-Instruct": 0.9837888888888889,
+   "hape_gen_llama-3-8B": 0.6355055555555555,
+   "hape_gen_llama-3-70B": 0.6329902777777777,
+   "hc3_dm": 0.9985732292286684,
+   "hc3_lr": 0.9994660551101152,
+   "raid_chat_dm": 0.9580631772107655,
+   "raid_nonchat_dm": 0.5845655916245082,
+   "raid_chat_lr": 0.9883811021787254,
+   "raid_nonchat_lr": 0.660718802698145,
+   "mage_dm": 0.529128125,
+   "mage_lr": 0.5668953125,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.472927570343018,
+    "gpt-4o-mini-2024-07-18": 4.614241123199463,
+    "llama-3-8B-Instruct": 3.683753252029419,
+    "llama-3-70B-Instruct": 3.460395336151123,
+    "llama-3-8B": 0.5279792547225952,
+    "llama-3-70B": 0.5088981986045837
+   },
+   "hc3dir_on_hc3_heldout": 0.9998074297118448,
+   "hc3dir_on_hape": 0.9277569444444447,
+   "raiddir_on_hape": 0.9790062500000001,
+   "hapedir_on_hc3_heldout": 0.9979167396099576,
+   "formality_auc_along_ai": 0.7998666666666667,
+   "formality_auc_along_formality": 0.9548111111111112,
+   "ai_auc_along_formality": 0.6468180555555555,
+   "cos_with_ai_read": {
+    "ai_lr": 0.43421342968940735,
+    "ai_hc3": 0.5385080575942993,
+    "ai_raid": 0.8105553388595581,
+    "ai_base_gens": 0.3427460789680481,
+    "formality": 0.23759853839874268,
+    "fluency": 0.3154153823852539,
+    "length": -0.08196285367012024,
+    "chat_register": 0.9365162253379822,
+    "write_raw": 0.37422865629196167,
+    "write_chat": 0.7332935333251953,
+    "assistant_axis": -0.11598726361989975,
+    "genre_subspace_frac": 0.11960020661354065
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9994,
+    "blog": 0.974425,
+    "fic": 0.9965999999999999,
+    "news": 0.999075,
+    "spok": 0.9989,
+    "tvm": 0.994325
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9949256944444446,
+     "frac_ai_dir_removed": 0.05645310878753662
+    },
+    "fluency": {
+     "auroc": 0.9938472222222222,
+     "frac_ai_dir_removed": 0.09948688745498657
+    },
+    "length": {
+     "auroc": 0.9902527777777776,
+     "frac_ai_dir_removed": 0.0067179203033447266
+    },
+    "chat_register": {
+     "auroc": 0.797082638888889,
+     "frac_ai_dir_removed": 0.8770626783370972
+    },
+    "assistant_axis": {
+     "auroc": 0.9866277777777779,
+     "frac_ai_dir_removed": 0.013453245162963867
+    },
+    "genre": {
+     "auroc": 0.9951604166666668,
+     "frac_ai_dir_removed": 0.11960011720657349
+    },
+    "all": {
+     "auroc": 0.8088527777777778,
+     "frac_ai_dir_removed": 0.8922922015190125
+    }
+   }
+  },
+  "21": {
+   "resid_norm": 10.311454772949219,
+   "dm_norm": 3.0747768878936768,
+   "hape_test_dm": 0.9894354166666667,
+   "hape_test_lr": 0.9994923611111112,
+   "cos_dm_lr": 0.4399493336677551,
+   "hape_gen_gpt-4o-2024-08-06": 0.9961972222222221,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9918388888888888,
+   "hape_gen_llama-3-8B-Instruct": 0.9851555555555555,
+   "hape_gen_llama-3-70B-Instruct": 0.98455,
+   "hape_gen_llama-3-8B": 0.6381749999999999,
+   "hape_gen_llama-3-70B": 0.6369819444444444,
+   "hc3_dm": 0.9986585728791009,
+   "hc3_lr": 0.9992909912117923,
+   "raid_chat_dm": 0.9629318128859372,
+   "raid_nonchat_dm": 0.5663443296795952,
+   "raid_chat_lr": 0.988299545613422,
+   "raid_nonchat_lr": 0.6640853358628442,
+   "mage_dm": 0.5157890625,
+   "mage_lr": 0.5614546875,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.241816997528076,
+    "gpt-4o-mini-2024-07-18": 4.370616912841797,
+    "llama-3-8B-Instruct": 3.517535924911499,
+    "llama-3-70B-Instruct": 3.327075481414795,
+    "llama-3-8B": 0.5293704867362976,
+    "llama-3-70B": 0.5168874263763428
+   },
+   "hc3dir_on_hc3_heldout": 0.9997899233220126,
+   "hc3dir_on_hape": 0.9223930555555555,
+   "raiddir_on_hape": 0.9751701388888889,
+   "hapedir_on_hc3_heldout": 0.9980480375336999,
+   "formality_auc_along_ai": 0.8215222222222223,
+   "formality_auc_along_formality": 0.9549333333333334,
+   "ai_auc_along_formality": 0.6603965277777778,
+   "cos_with_ai_read": {
+    "ai_lr": 0.4399493336677551,
+    "ai_hc3": 0.546724259853363,
+    "ai_raid": 0.8011075854301453,
+    "ai_base_gens": 0.35897812247276306,
+    "formality": 0.27009981870651245,
+    "fluency": 0.33863234519958496,
+    "length": -0.056470032781362534,
+    "chat_register": 0.9368353486061096,
+    "write_raw": 0.37706059217453003,
+    "write_chat": 0.7356550097465515,
+    "assistant_axis": -0.10860978811979294,
+    "genre_subspace_frac": 0.12629522383213043
+   },
+   "leave_one_genre_out": {
+    "acad": 0.999325,
+    "blog": 0.97725,
+    "fic": 0.9965499999999999,
+    "news": 0.9991,
+    "spok": 0.9986999999999999,
+    "tvm": 0.995375
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9957402777777778,
+     "frac_ai_dir_removed": 0.07295399904251099
+    },
+    "fluency": {
+     "auroc": 0.9941131944444446,
+     "frac_ai_dir_removed": 0.11467194557189941
+    },
+    "length": {
+     "auroc": 0.990086111111111,
+     "frac_ai_dir_removed": 0.003188908100128174
+    },
+    "chat_register": {
+     "auroc": 0.7994652777777778,
+     "frac_ai_dir_removed": 0.8776606321334839
+    },
+    "assistant_axis": {
+     "auroc": 0.9866847222222221,
+     "frac_ai_dir_removed": 0.011796176433563232
+    },
+    "genre": {
+     "auroc": 0.9955402777777778,
+     "frac_ai_dir_removed": 0.12629520893096924
+    },
+    "all": {
+     "auroc": 0.8092673611111112,
+     "frac_ai_dir_removed": 0.8923330903053284
+    }
+   }
+  },
+  "22": {
+   "resid_norm": 12.05859661102295,
+   "dm_norm": 3.748086452484131,
+   "hape_test_dm": 0.9887076388888888,
+   "hape_test_lr": 0.9994402777777778,
+   "cos_dm_lr": 0.434076726436615,
+   "hape_gen_gpt-4o-2024-08-06": 0.9965027777777778,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9916916666666666,
+   "hape_gen_llama-3-8B-Instruct": 0.9829027777777778,
+   "hape_gen_llama-3-70B-Instruct": 0.9837333333333333,
+   "hape_gen_llama-3-8B": 0.6219805555555555,
+   "hape_gen_llama-3-70B": 0.6298402777777778,
+   "hc3_dm": 0.995931952662722,
+   "hc3_lr": 0.9990918560274501,
+   "raid_chat_dm": 0.9624774263078177,
+   "raid_nonchat_dm": 0.5288627740303541,
+   "raid_chat_lr": 0.9881400734009087,
+   "raid_nonchat_lr": 0.6622057686902755,
+   "mage_dm": 0.4829796875,
+   "mage_lr": 0.5619343750000001,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.230076313018799,
+    "gpt-4o-mini-2024-07-18": 4.347662448883057,
+    "llama-3-8B-Instruct": 3.4462881088256836,
+    "llama-3-70B-Instruct": 3.2845609188079834,
+    "llama-3-8B": 0.46317988634109497,
+    "llama-3-70B": 0.4808444082736969
+   },
+   "hc3dir_on_hc3_heldout": 0.999754910542348,
+   "hc3dir_on_hape": 0.9066555555555557,
+   "raiddir_on_hape": 0.9716131944444444,
+   "hapedir_on_hc3_heldout": 0.9947393298553973,
+   "formality_auc_along_ai": 0.8206666666666668,
+   "formality_auc_along_formality": 0.9557555555555555,
+   "ai_auc_along_formality": 0.653873611111111,
+   "cos_with_ai_read": {
+    "ai_lr": 0.43407678604125977,
+    "ai_hc3": 0.5278373956680298,
+    "ai_raid": 0.7933052182197571,
+    "ai_base_gens": 0.33688032627105713,
+    "formality": 0.27529269456863403,
+    "fluency": 0.33452877402305603,
+    "length": -0.012576144188642502,
+    "chat_register": 0.9422259330749512,
+    "write_raw": 0.33983898162841797,
+    "write_chat": 0.734706461429596,
+    "assistant_axis": -0.16240157186985016,
+    "genre_subspace_frac": 0.12535327672958374
+   },
+   "leave_one_genre_out": {
+    "acad": 0.998775,
+    "blog": 0.979775,
+    "fic": 0.9943750000000001,
+    "news": 0.9988750000000001,
+    "spok": 0.998175,
+    "tvm": 0.994525
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.995776388888889,
+     "frac_ai_dir_removed": 0.07578617334365845
+    },
+    "fluency": {
+     "auroc": 0.9937138888888889,
+     "frac_ai_dir_removed": 0.11190944910049438
+    },
+    "length": {
+     "auroc": 0.9888416666666667,
+     "frac_ai_dir_removed": 0.0001583099365234375
+    },
+    "chat_register": {
+     "auroc": 0.772688888888889,
+     "frac_ai_dir_removed": 0.887789785861969
+    },
+    "assistant_axis": {
+     "auroc": 0.9833444444444444,
+     "frac_ai_dir_removed": 0.02637428045272827
+    },
+    "genre": {
+     "auroc": 0.9955284722222222,
+     "frac_ai_dir_removed": 0.12535327672958374
+    },
+    "all": {
+     "auroc": 0.7979611111111111,
+     "frac_ai_dir_removed": 0.9036628007888794
+    }
+   }
+  },
+  "23": {
+   "resid_norm": 13.591961860656738,
+   "dm_norm": 4.024313926696777,
+   "hape_test_dm": 0.9899312499999999,
+   "hape_test_lr": 0.9994277777777778,
+   "cos_dm_lr": 0.44033586978912354,
+   "hape_gen_gpt-4o-2024-08-06": 0.9967583333333333,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9920722222222221,
+   "hape_gen_llama-3-8B-Instruct": 0.9847722222222222,
+   "hape_gen_llama-3-70B-Instruct": 0.9861222222222221,
+   "hape_gen_llama-3-8B": 0.629311111111111,
+   "hape_gen_llama-3-70B": 0.6376013888888888,
+   "hc3_dm": 0.9957787717516895,
+   "hc3_lr": 0.9991618815867791,
+   "raid_chat_dm": 0.9631823080507982,
+   "raid_nonchat_dm": 0.5162002880831928,
+   "raid_chat_lr": 0.9873951415588955,
+   "raid_nonchat_lr": 0.656199936762226,
+   "mage_dm": 0.47212343749999997,
+   "mage_lr": 0.5549484375,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.1935248374938965,
+    "gpt-4o-mini-2024-07-18": 4.304160118103027,
+    "llama-3-8B-Instruct": 3.4562106132507324,
+    "llama-3-70B-Instruct": 3.301466703414917,
+    "llama-3-8B": 0.4856490194797516,
+    "llama-3-70B": 0.5042616724967957
+   },
+   "hc3dir_on_hc3_heldout": 0.9997023913728511,
+   "hc3dir_on_hape": 0.9103083333333333,
+   "raiddir_on_hape": 0.9717840277777777,
+   "hapedir_on_hc3_heldout": 0.9947393298553973,
+   "formality_auc_along_ai": 0.8174555555555555,
+   "formality_auc_along_formality": 0.9550555555555557,
+   "ai_auc_along_formality": 0.6515118055555557,
+   "cos_with_ai_read": {
+    "ai_lr": 0.44033586978912354,
+    "ai_hc3": 0.5388106107711792,
+    "ai_raid": 0.7882105112075806,
+    "ai_base_gens": 0.35046592354774475,
+    "formality": 0.28367090225219727,
+    "fluency": 0.3289584517478943,
+    "length": 0.01030232384800911,
+    "chat_register": 0.9404982328414917,
+    "write_raw": 0.34676310420036316,
+    "write_chat": 0.7374498844146729,
+    "assistant_axis": -0.17367812991142273,
+    "genre_subspace_frac": 0.12224598973989487
+   },
+   "leave_one_genre_out": {
+    "acad": 0.998375,
+    "blog": 0.981075,
+    "fic": 0.99495,
+    "news": 0.998775,
+    "spok": 0.998725,
+    "tvm": 0.994975
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9961347222222223,
+     "frac_ai_dir_removed": 0.08046925067901611
+    },
+    "fluency": {
+     "auroc": 0.9933861111111112,
+     "frac_ai_dir_removed": 0.10821378231048584
+    },
+    "length": {
+     "auroc": 0.9898395833333333,
+     "frac_ai_dir_removed": 0.00010633468627929688
+    },
+    "chat_register": {
+     "auroc": 0.7727666666666666,
+     "frac_ai_dir_removed": 0.8845369219779968
+    },
+    "assistant_axis": {
+     "auroc": 0.9841416666666665,
+     "frac_ai_dir_removed": 0.03016418218612671
+    },
+    "genre": {
+     "auroc": 0.9953993055555556,
+     "frac_ai_dir_removed": 0.12224602699279785
+    },
+    "all": {
+     "auroc": 0.8001847222222223,
+     "frac_ai_dir_removed": 0.9014946818351746
+    }
+   }
+  },
+  "24": {
+   "resid_norm": 15.575942993164062,
+   "dm_norm": 4.342090606689453,
+   "hape_test_dm": 0.9905729166666666,
+   "hape_test_lr": 0.9994263888888889,
+   "cos_dm_lr": 0.4518786668777466,
+   "hape_gen_gpt-4o-2024-08-06": 0.9970888888888888,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9925111111111111,
+   "hape_gen_llama-3-8B-Instruct": 0.9860833333333333,
+   "hape_gen_llama-3-70B-Instruct": 0.9866083333333333,
+   "hape_gen_llama-3-8B": 0.6269138888888889,
+   "hape_gen_llama-3-70B": 0.6340486111111111,
+   "hc3_dm": 0.9971749063408144,
+   "hc3_lr": 0.9994660551101152,
+   "raid_chat_dm": 0.9577041826867062,
+   "raid_nonchat_dm": 0.5286546163575042,
+   "raid_chat_lr": 0.9874817954095305,
+   "raid_nonchat_lr": 0.6560036361720067,
+   "mage_dm": 0.4797828125,
+   "mage_lr": 0.5569171875000001,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.558063983917236,
+    "gpt-4o-mini-2024-07-18": 4.692102432250977,
+    "llama-3-8B-Instruct": 3.66876220703125,
+    "llama-3-70B-Instruct": 3.487757682800293,
+    "llama-3-8B": 0.47933122515678406,
+    "llama-3-70B": 0.4978441298007965
+   },
+   "hc3dir_on_hc3_heldout": 0.9997461573474318,
+   "hc3dir_on_hape": 0.9062520833333334,
+   "raiddir_on_hape": 0.9706715277777778,
+   "hapedir_on_hc3_heldout": 0.9962973985504708,
+   "formality_auc_along_ai": 0.7986555555555556,
+   "formality_auc_along_formality": 0.9561,
+   "ai_auc_along_formality": 0.6293437500000001,
+   "cos_with_ai_read": {
+    "ai_lr": 0.4518786668777466,
+    "ai_hc3": 0.5119689106941223,
+    "ai_raid": 0.7817206978797913,
+    "ai_base_gens": 0.32468169927597046,
+    "formality": 0.2507966458797455,
+    "fluency": 0.28208035230636597,
+    "length": -0.006277773529291153,
+    "chat_register": 0.9394630193710327,
+    "write_raw": 0.33963489532470703,
+    "write_chat": 0.7311840057373047,
+    "assistant_axis": -0.20268529653549194,
+    "genre_subspace_frac": 0.09969206899404526
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9987,
+    "blog": 0.9779,
+    "fic": 0.9948500000000001,
+    "news": 0.9987999999999999,
+    "spok": 0.998,
+    "tvm": 0.994425
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9955000000000002,
+     "frac_ai_dir_removed": 0.06289893388748169
+    },
+    "fluency": {
+     "auroc": 0.9926187499999999,
+     "frac_ai_dir_removed": 0.07956939935684204
+    },
+    "length": {
+     "auroc": 0.9906534722222223,
+     "frac_ai_dir_removed": 3.933906555175781e-05
+    },
+    "chat_register": {
+     "auroc": 0.7721208333333334,
+     "frac_ai_dir_removed": 0.8825907111167908
+    },
+    "assistant_axis": {
+     "auroc": 0.9836708333333333,
+     "frac_ai_dir_removed": 0.04108119010925293
+    },
+    "genre": {
+     "auroc": 0.9947291666666667,
+     "frac_ai_dir_removed": 0.09969198703765869
+    },
+    "all": {
+     "auroc": 0.802426388888889,
+     "frac_ai_dir_removed": 0.9003523588180542
+    }
+   }
+  },
+  "25": {
+   "resid_norm": 17.432476043701172,
+   "dm_norm": 4.5381550788879395,
+   "hape_test_dm": 0.9912166666666667,
+   "hape_test_lr": 0.9994597222222222,
+   "cos_dm_lr": 0.4585503339767456,
+   "hape_gen_gpt-4o-2024-08-06": 0.9969638888888889,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9924333333333335,
+   "hape_gen_llama-3-8B-Instruct": 0.987575,
+   "hape_gen_llama-3-70B-Instruct": 0.9878944444444445,
+   "hape_gen_llama-3-8B": 0.6373055555555556,
+   "hape_gen_llama-3-70B": 0.6408625,
+   "hc3_dm": 0.9981311928854033,
+   "hc3_lr": 0.999518574279612,
+   "raid_chat_dm": 0.9534646976581616,
+   "raid_nonchat_dm": 0.5362642284991568,
+   "raid_chat_lr": 0.9877257369218222,
+   "raid_nonchat_lr": 0.6588629496908376,
+   "mage_dm": 0.48303125,
+   "mage_lr": 0.5515578125,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.596493244171143,
+    "gpt-4o-mini-2024-07-18": 4.7293620109558105,
+    "llama-3-8B-Instruct": 3.740856170654297,
+    "llama-3-70B-Instruct": 3.546483039855957,
+    "llama-3-8B": 0.5176329016685486,
+    "llama-3-70B": 0.5248534679412842
+   },
+   "hc3dir_on_hc3_heldout": 0.9997461573474318,
+   "hc3dir_on_hape": 0.9106000000000001,
+   "raiddir_on_hape": 0.9740666666666665,
+   "hapedir_on_hc3_heldout": 0.9976979097370541,
+   "formality_auc_along_ai": 0.7944555555555557,
+   "formality_auc_along_formality": 0.9555888888888888,
+   "ai_auc_along_formality": 0.6289222222222222,
+   "cos_with_ai_read": {
+    "ai_lr": 0.4585503339767456,
+    "ai_hc3": 0.5134553909301758,
+    "ai_raid": 0.7808224558830261,
+    "ai_base_gens": 0.33238452672958374,
+    "formality": 0.24973374605178833,
+    "fluency": 0.2683568000793457,
+    "length": 0.0004281550645828247,
+    "chat_register": 0.9372827410697937,
+    "write_raw": 0.35613441467285156,
+    "write_chat": 0.7320955991744995,
+    "assistant_axis": -0.21224364638328552,
+    "genre_subspace_frac": 0.0966435968875885
+   },
+   "leave_one_genre_out": {
+    "acad": 0.99865,
+    "blog": 0.9741749999999999,
+    "fic": 0.9956,
+    "news": 0.99925,
+    "spok": 0.9986000000000002,
+    "tvm": 0.9947250000000001
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9952152777777777,
+     "frac_ai_dir_removed": 0.06236696243286133
+    },
+    "fluency": {
+     "auroc": 0.9917916666666666,
+     "frac_ai_dir_removed": 0.07201534509658813
+    },
+    "length": {
+     "auroc": 0.9912125,
+     "frac_ai_dir_removed": 2.384185791015625e-07
+    },
+    "chat_register": {
+     "auroc": 0.7885166666666666,
+     "frac_ai_dir_removed": 0.8784990310668945
+    },
+    "assistant_axis": {
+     "auroc": 0.9845659722222222,
+     "frac_ai_dir_removed": 0.0450473427772522
+    },
+    "genre": {
+     "auroc": 0.994023611111111,
+     "frac_ai_dir_removed": 0.09664368629455566
+    },
+    "all": {
+     "auroc": 0.8084319444444444,
+     "frac_ai_dir_removed": 0.8995431065559387
+    }
+   }
+  },
+  "26": {
+   "resid_norm": 18.978517532348633,
+   "dm_norm": 5.049218654632568,
+   "hape_test_dm": 0.9906138888888888,
+   "hape_test_lr": 0.9994673611111111,
+   "cos_dm_lr": 0.4614941477775574,
+   "hape_gen_gpt-4o-2024-08-06": 0.9970555555555556,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9923222222222222,
+   "hape_gen_llama-3-8B-Instruct": 0.9860527777777777,
+   "hape_gen_llama-3-70B-Instruct": 0.9870249999999999,
+   "hape_gen_llama-3-8B": 0.6302694444444444,
+   "hape_gen_llama-3-70B": 0.6374708333333334,
+   "hc3_dm": 0.9974790798641504,
+   "hc3_lr": 0.9994726200063023,
+   "raid_chat_dm": 0.9515925375742748,
+   "raid_nonchat_dm": 0.5213251826869028,
+   "raid_chat_lr": 0.987213823837819,
+   "raid_nonchat_lr": 0.6569192664418213,
+   "mage_dm": 0.4792296875,
+   "mage_lr": 0.5576984375,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.563817501068115,
+    "gpt-4o-mini-2024-07-18": 4.693422794342041,
+    "llama-3-8B-Instruct": 3.660890817642212,
+    "llama-3-70B-Instruct": 3.479520559310913,
+    "llama-3-8B": 0.49071958661079407,
+    "llama-3-70B": 0.5085887312889099
+   },
+   "hc3dir_on_hc3_heldout": 0.9998249361016771,
+   "hc3dir_on_hape": 0.8999826388888887,
+   "raiddir_on_hape": 0.97395,
+   "hapedir_on_hc3_heldout": 0.9967525646861104,
+   "formality_auc_along_ai": 0.807011111111111,
+   "formality_auc_along_formality": 0.9534,
+   "ai_auc_along_formality": 0.6309381944444444,
+   "cos_with_ai_read": {
+    "ai_lr": 0.4614941477775574,
+    "ai_hc3": 0.4940274953842163,
+    "ai_raid": 0.7609087228775024,
+    "ai_base_gens": 0.3301275074481964,
+    "formality": 0.25783607363700867,
+    "fluency": 0.2739105820655823,
+    "length": 0.02138335257768631,
+    "chat_register": 0.9342114329338074,
+    "write_raw": 0.33848997950553894,
+    "write_chat": 0.7235032916069031,
+    "assistant_axis": -0.25590866804122925,
+    "genre_subspace_frac": 0.10022478550672531
+   },
+   "leave_one_genre_out": {
+    "acad": 0.998375,
+    "blog": 0.9724999999999999,
+    "fic": 0.9949000000000001,
+    "news": 0.99905,
+    "spok": 0.9987,
+    "tvm": 0.9945250000000001
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9948958333333333,
+     "frac_ai_dir_removed": 0.06647932529449463
+    },
+    "fluency": {
+     "auroc": 0.9912270833333333,
+     "frac_ai_dir_removed": 0.07502692937850952
+    },
+    "length": {
+     "auroc": 0.9903604166666666,
+     "frac_ai_dir_removed": 0.0004571080207824707
+    },
+    "chat_register": {
+     "auroc": 0.7844027777777778,
+     "frac_ai_dir_removed": 0.8727510571479797
+    },
+    "assistant_axis": {
+     "auroc": 0.9814999999999998,
+     "frac_ai_dir_removed": 0.06548899412155151
+    },
+    "genre": {
+     "auroc": 0.993832638888889,
+     "frac_ai_dir_removed": 0.10022485256195068
+    },
+    "all": {
+     "auroc": 0.8089124999999999,
+     "frac_ai_dir_removed": 0.8988978862762451
+    }
+   }
+  },
+  "27": {
+   "resid_norm": 22.126497268676758,
+   "dm_norm": 5.531436920166016,
+   "hape_test_dm": 0.991025,
+   "hape_test_lr": 0.99941875,
+   "cos_dm_lr": 0.4764241576194763,
+   "hape_gen_gpt-4o-2024-08-06": 0.9969638888888889,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9923194444444445,
+   "hape_gen_llama-3-8B-Instruct": 0.9873527777777777,
+   "hape_gen_llama-3-70B-Instruct": 0.9874638888888889,
+   "hape_gen_llama-3-8B": 0.6347277777777778,
+   "hape_gen_llama-3-70B": 0.6365152777777778,
+   "hc3_dm": 0.998424424915094,
+   "hc3_lr": 0.9996192360211478,
+   "raid_chat_dm": 0.9545737213095654,
+   "raid_nonchat_dm": 0.5480817875210793,
+   "raid_chat_lr": 0.9875495164860771,
+   "raid_nonchat_lr": 0.6597719926925238,
+   "mage_dm": 0.49701406249999996,
+   "mage_lr": 0.562740625,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.770481586456299,
+    "gpt-4o-mini-2024-07-18": 4.91689395904541,
+    "llama-3-8B-Instruct": 3.769618034362793,
+    "llama-3-70B-Instruct": 3.5726943016052246,
+    "llama-3-8B": 0.5084955096244812,
+    "llama-3-70B": 0.5112363696098328
+   },
+   "hc3dir_on_hc3_heldout": 0.9998074297118448,
+   "hc3dir_on_hape": 0.9089798611111111,
+   "raiddir_on_hape": 0.9777194444444446,
+   "hapedir_on_hc3_heldout": 0.9979429991947061,
+   "formality_auc_along_ai": 0.8062222222222222,
+   "formality_auc_along_formality": 0.9546888888888889,
+   "ai_auc_along_formality": 0.6308680555555556,
+   "cos_with_ai_read": {
+    "ai_lr": 0.4764241576194763,
+    "ai_hc3": 0.4941093921661377,
+    "ai_raid": 0.7782511115074158,
+    "ai_base_gens": 0.32444989681243896,
+    "formality": 0.2515435814857483,
+    "fluency": 0.2542063891887665,
+    "length": -0.015404213219881058,
+    "chat_register": 0.93001788854599,
+    "write_raw": 0.3530600666999817,
+    "write_chat": 0.7166721224784851,
+    "assistant_axis": -0.25996434688568115,
+    "genre_subspace_frac": 0.091904416680336
+   },
+   "leave_one_genre_out": {
+    "acad": 0.998775,
+    "blog": 0.9692,
+    "fic": 0.9949,
+    "news": 0.9991,
+    "spok": 0.998925,
+    "tvm": 0.994325
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9946756944444444,
+     "frac_ai_dir_removed": 0.06327414512634277
+    },
+    "fluency": {
+     "auroc": 0.9911875000000001,
+     "frac_ai_dir_removed": 0.06462091207504272
+    },
+    "length": {
+     "auroc": 0.9912236111111111,
+     "frac_ai_dir_removed": 0.00023734569549560547
+    },
+    "chat_register": {
+     "auroc": 0.7829513888888888,
+     "frac_ai_dir_removed": 0.8649333715438843
+    },
+    "assistant_axis": {
+     "auroc": 0.9823701388888889,
+     "frac_ai_dir_removed": 0.06758153438568115
+    },
+    "genre": {
+     "auroc": 0.9932993055555556,
+     "frac_ai_dir_removed": 0.09190446138381958
+    },
+    "all": {
+     "auroc": 0.8090798611111111,
+     "frac_ai_dir_removed": 0.8910384178161621
+    }
+   }
+  },
+  "28": {
+   "resid_norm": 24.704174041748047,
+   "dm_norm": 6.196660995483398,
+   "hape_test_dm": 0.9934368055555556,
+   "hape_test_lr": 0.9994277777777778,
+   "cos_dm_lr": 0.4912499785423279,
+   "hape_gen_gpt-4o-2024-08-06": 0.997211111111111,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9929027777777777,
+   "hape_gen_llama-3-8B-Instruct": 0.9915305555555555,
+   "hape_gen_llama-3-70B-Instruct": 0.9921027777777778,
+   "hape_gen_llama-3-8B": 0.6657666666666667,
+   "hape_gen_llama-3-70B": 0.6587513888888888,
+   "hc3_dm": 0.9994682434088442,
+   "hc3_lr": 0.9997308392563286,
+   "raid_chat_dm": 0.9635114470464874,
+   "raid_nonchat_dm": 0.5767390387858348,
+   "raid_chat_lr": 0.987809478037982,
+   "raid_nonchat_lr": 0.679268549747049,
+   "mage_dm": 0.512353125,
+   "mage_lr": 0.5716859375000001,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.438516139984131,
+    "gpt-4o-mini-2024-07-18": 4.567669868469238,
+    "llama-3-8B-Instruct": 3.79315185546875,
+    "llama-3-70B-Instruct": 3.582003355026245,
+    "llama-3-8B": 0.6143888831138611,
+    "llama-3-70B": 0.5921072959899902
+   },
+   "hc3dir_on_hc3_heldout": 0.9999737404152516,
+   "hc3dir_on_hape": 0.9383416666666666,
+   "raiddir_on_hape": 0.985178125,
+   "hapedir_on_hc3_heldout": 0.9992822380168762,
+   "formality_auc_along_ai": 0.8027000000000002,
+   "formality_auc_along_formality": 0.9549222222222222,
+   "ai_auc_along_formality": 0.6381312499999999,
+   "cos_with_ai_read": {
+    "ai_lr": 0.4912499785423279,
+    "ai_hc3": 0.5221340656280518,
+    "ai_raid": 0.7739601135253906,
+    "ai_base_gens": 0.396424263715744,
+    "formality": 0.2554323077201843,
+    "fluency": 0.28167974948883057,
+    "length": -0.04548605531454086,
+    "chat_register": 0.9243515729904175,
+    "write_raw": 0.40678805112838745,
+    "write_chat": 0.7233012914657593,
+    "assistant_axis": -0.2245040237903595,
+    "genre_subspace_frac": 0.10048627108335495
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9992000000000001,
+    "blog": 0.973925,
+    "fic": 0.997675,
+    "news": 0.999375,
+    "spok": 0.999825,
+    "tvm": 0.9957250000000001
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9962736111111111,
+     "frac_ai_dir_removed": 0.06524580717086792
+    },
+    "fluency": {
+     "auroc": 0.9926909722222222,
+     "frac_ai_dir_removed": 0.07934349775314331
+    },
+    "length": {
+     "auroc": 0.9937756944444445,
+     "frac_ai_dir_removed": 0.00206911563873291
+    },
+    "chat_register": {
+     "auroc": 0.7812305555555557,
+     "frac_ai_dir_removed": 0.854425847530365
+    },
+    "assistant_axis": {
+     "auroc": 0.9889673611111112,
+     "frac_ai_dir_removed": 0.050402045249938965
+    },
+    "genre": {
+     "auroc": 0.9944444444444445,
+     "frac_ai_dir_removed": 0.1004863977432251
+    },
+    "all": {
+     "auroc": 0.8193159722222223,
+     "frac_ai_dir_removed": 0.8918713927268982
+    }
+   }
+  },
+  "29": {
+   "resid_norm": 27.43539047241211,
+   "dm_norm": 6.593670845031738,
+   "hape_test_dm": 0.9937701388888889,
+   "hape_test_lr": 0.9994388888888889,
+   "cos_dm_lr": 0.5077780485153198,
+   "hape_gen_gpt-4o-2024-08-06": 0.9972611111111112,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.993,
+   "hape_gen_llama-3-8B-Instruct": 0.9920416666666666,
+   "hape_gen_llama-3-70B-Instruct": 0.9927777777777778,
+   "hape_gen_llama-3-8B": 0.6753305555555555,
+   "hape_gen_llama-3-70B": 0.6675152777777777,
+   "hc3_dm": 0.9995054444872378,
+   "hc3_lr": 0.9997308392563286,
+   "raid_chat_dm": 0.9687849528137016,
+   "raid_nonchat_dm": 0.5717046093310849,
+   "raid_chat_lr": 0.9860822264942328,
+   "raid_nonchat_lr": 0.6705540331646993,
+   "mage_dm": 0.5069125,
+   "mage_lr": 0.5665250000000001,
+   "dprime": {
+    "gpt-4o-2024-08-06": 4.299122333526611,
+    "gpt-4o-mini-2024-07-18": 4.419729232788086,
+    "llama-3-8B-Instruct": 3.701725959777832,
+    "llama-3-70B-Instruct": 3.500635862350464,
+    "llama-3-8B": 0.6419758796691895,
+    "llama-3-70B": 0.617668628692627
+   },
+   "hc3dir_on_hc3_heldout": 0.9999649872203354,
+   "hc3dir_on_hape": 0.9469069444444446,
+   "raiddir_on_hape": 0.9876208333333334,
+   "hapedir_on_hc3_heldout": 0.9993084976016247,
+   "formality_auc_along_ai": 0.8124666666666666,
+   "formality_auc_along_formality": 0.9550000000000001,
+   "ai_auc_along_formality": 0.6440624999999999,
+   "cos_with_ai_read": {
+    "ai_lr": 0.5077780485153198,
+    "ai_hc3": 0.528822660446167,
+    "ai_raid": 0.773762047290802,
+    "ai_base_gens": 0.41560956835746765,
+    "formality": 0.26754486560821533,
+    "fluency": 0.2944832444190979,
+    "length": -0.018678003922104836,
+    "chat_register": 0.9220253825187683,
+    "write_raw": 0.42210471630096436,
+    "write_chat": 0.7153367400169373,
+    "assistant_axis": -0.21485993266105652,
+    "genre_subspace_frac": 0.10855261981487274
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9993000000000001,
+    "blog": 0.9742250000000001,
+    "fic": 0.998125,
+    "news": 0.9994500000000001,
+    "spok": 0.9999,
+    "tvm": 0.996175
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9965902777777778,
+     "frac_ai_dir_removed": 0.07158017158508301
+    },
+    "fluency": {
+     "auroc": 0.9923715277777777,
+     "frac_ai_dir_removed": 0.08672034740447998
+    },
+    "length": {
+     "auroc": 0.9938944444444444,
+     "frac_ai_dir_removed": 0.00034886598587036133
+    },
+    "chat_register": {
+     "auroc": 0.7900333333333334,
+     "frac_ai_dir_removed": 0.8501306176185608
+    },
+    "assistant_axis": {
+     "auroc": 0.9899083333333332,
+     "frac_ai_dir_removed": 0.04616481065750122
+    },
+    "genre": {
+     "auroc": 0.9944895833333334,
+     "frac_ai_dir_removed": 0.10855257511138916
+    },
+    "all": {
+     "auroc": 0.8229145833333333,
+     "frac_ai_dir_removed": 0.8905166983604431
+    }
+   }
+  },
+  "30": {
+   "resid_norm": 29.66392707824707,
+   "dm_norm": 7.209357261657715,
+   "hape_test_dm": 0.9938548611111111,
+   "hape_test_lr": 0.9994194444444444,
+   "cos_dm_lr": 0.525763750076294,
+   "hape_gen_gpt-4o-2024-08-06": 0.9967388888888888,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9926472222222223,
+   "hape_gen_llama-3-8B-Instruct": 0.992461111111111,
+   "hape_gen_llama-3-70B-Instruct": 0.9935722222222222,
+   "hape_gen_llama-3-8B": 0.6869416666666666,
+   "hape_gen_llama-3-70B": 0.6763208333333333,
+   "hc3_dm": 0.9996542488008123,
+   "hc3_lr": 0.9996695668919156,
+   "raid_chat_dm": 0.9742732727484562,
+   "raid_nonchat_dm": 0.5871346261944912,
+   "raid_chat_lr": 0.9853001572876615,
+   "raid_nonchat_lr": 0.6579591765036538,
+   "mage_dm": 0.51078125,
+   "mage_lr": 0.5653625,
+   "dprime": {
+    "gpt-4o-2024-08-06": 3.8687081336975098,
+    "gpt-4o-mini-2024-07-18": 3.9741175174713135,
+    "llama-3-8B-Instruct": 3.506214141845703,
+    "llama-3-70B-Instruct": 3.3091466426849365,
+    "llama-3-8B": 0.6757065057754517,
+    "llama-3-70B": 0.6407901048660278
+   },
+   "hc3dir_on_hc3_heldout": 0.9999649872203354,
+   "hc3dir_on_hape": 0.9549604166666666,
+   "raiddir_on_hape": 0.9874013888888888,
+   "hapedir_on_hc3_heldout": 0.9995360806694443,
+   "formality_auc_along_ai": 0.8218666666666667,
+   "formality_auc_along_formality": 0.9539222222222222,
+   "ai_auc_along_formality": 0.6383375,
+   "cos_with_ai_read": {
+    "ai_lr": 0.525763750076294,
+    "ai_hc3": 0.5524790287017822,
+    "ai_raid": 0.7723180055618286,
+    "ai_base_gens": 0.46018022298812866,
+    "formality": 0.26454079151153564,
+    "fluency": 0.32847651839256287,
+    "length": -0.06914211809635162,
+    "chat_register": 0.9170531630516052,
+    "write_raw": 0.45378702878952026,
+    "write_chat": 0.7156604528427124,
+    "assistant_axis": -0.18072156608104706,
+    "genre_subspace_frac": 0.12103275954723358
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9993749999999999,
+    "blog": 0.9769,
+    "fic": 0.9984250000000001,
+    "news": 0.9992500000000001,
+    "spok": 0.999975,
+    "tvm": 0.9964250000000001
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9968291666666667,
+     "frac_ai_dir_removed": 0.0699816346168518
+    },
+    "fluency": {
+     "auroc": 0.9925979166666666,
+     "frac_ai_dir_removed": 0.10789674520492554
+    },
+    "length": {
+     "auroc": 0.9942229166666666,
+     "frac_ai_dir_removed": 0.00478053092956543
+    },
+    "chat_register": {
+     "auroc": 0.787975,
+     "frac_ai_dir_removed": 0.8409864902496338
+    },
+    "assistant_axis": {
+     "auroc": 0.9907638888888889,
+     "frac_ai_dir_removed": 0.032660067081451416
+    },
+    "genre": {
+     "auroc": 0.9949458333333333,
+     "frac_ai_dir_removed": 0.12103259563446045
+    },
+    "all": {
+     "auroc": 0.8224041666666667,
+     "frac_ai_dir_removed": 0.8921456933021545
+    }
+   }
+  },
+  "31": {
+   "resid_norm": 31.745716094970703,
+   "dm_norm": 8.920711517333984,
+   "hape_test_dm": 0.9923687499999999,
+   "hape_test_lr": 0.9994708333333334,
+   "cos_dm_lr": 0.5313483476638794,
+   "hape_gen_gpt-4o-2024-08-06": 0.9932472222222222,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9889166666666667,
+   "hape_gen_llama-3-8B-Instruct": 0.9927555555555555,
+   "hape_gen_llama-3-70B-Instruct": 0.9945555555555555,
+   "hape_gen_llama-3-8B": 0.7095916666666667,
+   "hape_gen_llama-3-70B": 0.6943430555555556,
+   "hc3_dm": 0.9992231539511922,
+   "hc3_lr": 0.9995842232414832,
+   "raid_chat_dm": 0.9756269660957708,
+   "raid_nonchat_dm": 0.5844118887015177,
+   "raid_chat_lr": 0.9871992601654433,
+   "raid_nonchat_lr": 0.6529581225407532,
+   "mage_dm": 0.5163390625,
+   "mage_lr": 0.557678125,
+   "dprime": {
+    "gpt-4o-2024-08-06": 2.8240058422088623,
+    "gpt-4o-mini-2024-07-18": 2.881154775619507,
+    "llama-3-8B-Instruct": 2.965533494949341,
+    "llama-3-70B-Instruct": 2.803285598754883,
+    "llama-3-8B": 0.7339227795600891,
+    "llama-3-70B": 0.6849589943885803
+   },
+   "hc3dir_on_hc3_heldout": 0.9999824936101677,
+   "hc3dir_on_hape": 0.9527354166666665,
+   "raiddir_on_hape": 0.9822916666666667,
+   "hapedir_on_hc3_heldout": 0.9990196421693919,
+   "formality_auc_along_ai": 0.8465666666666666,
+   "formality_auc_along_formality": 0.9587777777777777,
+   "ai_auc_along_formality": 0.66029375,
+   "cos_with_ai_read": {
+    "ai_lr": 0.5313483476638794,
+    "ai_hc3": 0.605767011642456,
+    "ai_raid": 0.782953143119812,
+    "ai_base_gens": 0.569430947303772,
+    "formality": 0.29765045642852783,
+    "fluency": 0.45298612117767334,
+    "length": -0.10194855183362961,
+    "chat_register": 0.9024105668067932,
+    "write_raw": 0.5400120615959167,
+    "write_chat": 0.6841345429420471,
+    "assistant_axis": -0.11057479679584503,
+    "genre_subspace_frac": 0.18703222274780273
+   },
+   "leave_one_genre_out": {
+    "acad": 0.999875,
+    "blog": 0.98995,
+    "fic": 0.9989250000000001,
+    "news": 0.9991500000000001,
+    "spok": 1.0,
+    "tvm": 0.997225
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9978743055555556,
+     "frac_ai_dir_removed": 0.08859562873840332
+    },
+    "fluency": {
+     "auroc": 0.9951722222222222,
+     "frac_ai_dir_removed": 0.2051963210105896
+    },
+    "length": {
+     "auroc": 0.9928027777777777,
+     "frac_ai_dir_removed": 0.010393321514129639
+    },
+    "chat_register": {
+     "auroc": 0.7921013888888888,
+     "frac_ai_dir_removed": 0.8143445253372192
+    },
+    "assistant_axis": {
+     "auroc": 0.9891930555555556,
+     "frac_ai_dir_removed": 0.012226641178131104
+    },
+    "genre": {
+     "auroc": 0.9973833333333334,
+     "frac_ai_dir_removed": 0.18703210353851318
+    },
+    "all": {
+     "auroc": 0.82245625,
+     "frac_ai_dir_removed": 0.8842440843582153
+    }
+   }
+  },
+  "32": {
+   "resid_norm": 75.26265716552734,
+   "dm_norm": 26.49557876586914,
+   "hape_test_dm": 0.9780909722222222,
+   "hape_test_lr": 0.9991680555555555,
+   "cos_dm_lr": 0.4440138041973114,
+   "hape_gen_gpt-4o-2024-08-06": 0.976275,
+   "hape_gen_gpt-4o-mini-2024-07-18": 0.9663750000000001,
+   "hape_gen_llama-3-8B-Instruct": 0.9844222222222222,
+   "hape_gen_llama-3-70B-Instruct": 0.9852916666666668,
+   "hape_gen_llama-3-8B": 0.717686111111111,
+   "hape_gen_llama-3-70B": 0.6996208333333334,
+   "hc3_dm": 0.9745850985609746,
+   "hc3_lr": 0.9985863590210428,
+   "raid_chat_dm": 0.9263864616101596,
+   "raid_nonchat_dm": 0.5653983979763912,
+   "raid_chat_lr": 0.9795038156821624,
+   "raid_nonchat_lr": 0.6610165472175379,
+   "mage_dm": 0.5058171874999999,
+   "mage_lr": 0.5486640625,
+   "dprime": {
+    "gpt-4o-2024-08-06": 1.9747838973999023,
+    "gpt-4o-mini-2024-07-18": 2.0037288665771484,
+    "llama-3-8B-Instruct": 2.3201873302459717,
+    "llama-3-70B-Instruct": 2.1854543685913086,
+    "llama-3-8B": 0.7516717314720154,
+    "llama-3-70B": 0.6988250613212585
+   },
+   "hc3dir_on_hc3_heldout": 0.9988183186863204,
+   "hc3dir_on_hape": 0.916486111111111,
+   "raiddir_on_hape": 0.9630645833333334,
+   "hapedir_on_hc3_heldout": 0.9759724799551837,
+   "formality_auc_along_ai": 0.8462111111111111,
+   "formality_auc_along_formality": 0.9557888888888889,
+   "ai_auc_along_formality": 0.6723208333333333,
+   "cos_with_ai_read": {
+    "ai_lr": 0.4440138041973114,
+    "ai_hc3": 0.5893283486366272,
+    "ai_raid": 0.7984614968299866,
+    "ai_base_gens": 0.555411696434021,
+    "formality": 0.34994515776634216,
+    "fluency": 0.5450610518455505,
+    "length": 0.1349601447582245,
+    "chat_register": 0.8763023614883423,
+    "write_raw": 0.5300451517105103,
+    "write_chat": 0.6580909490585327,
+    "assistant_axis": -0.18232889473438263,
+    "genre_subspace_frac": 0.3027089834213257
+   },
+   "leave_one_genre_out": {
+    "acad": 0.9923,
+    "blog": 0.980225,
+    "fic": 0.978425,
+    "news": 0.992875,
+    "spok": 1.0,
+    "tvm": 0.9966999999999999
+   },
+   "projection_out": {
+    "formality": {
+     "auroc": 0.9930701388888888,
+     "frac_ai_dir_removed": 0.12246167659759521
+    },
+    "fluency": {
+     "auroc": 0.9735791666666667,
+     "frac_ai_dir_removed": 0.29709160327911377
+    },
+    "length": {
+     "auroc": 0.9781541666666667,
+     "frac_ai_dir_removed": 0.01821434497833252
+    },
+    "chat_register": {
+     "auroc": 0.8356569444444444,
+     "frac_ai_dir_removed": 0.7679060101509094
+    },
+    "assistant_axis": {
+     "auroc": 0.9690944444444447,
+     "frac_ai_dir_removed": 0.03324389457702637
+    },
+    "genre": {
+     "auroc": 0.9943534722222223,
+     "frac_ai_dir_removed": 0.30270904302597046
+    },
+    "all": {
+     "auroc": 0.7995694444444444,
+     "frac_ai_dir_removed": 0.8826307654380798
+    }
+   }
+  }
+ },
+ "norms": {}
+}

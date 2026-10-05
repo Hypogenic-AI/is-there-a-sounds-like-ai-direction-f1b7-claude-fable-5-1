@@ -1,0 +1,52 @@
+\section{Additional Details}
+\label{app:details}
+
+\begin{table}[h]
+\centering
+\caption{Definitions of all directions. Each is a unit vector at layer 12.}
+\label{tab:directions}
+\small
+\begin{tabular}{@{}lp{0.72\linewidth}@{}}
+\toprule
+Name & Definition \\
+\midrule
+\airead (primary) & mean(chat-generator texts) $-$ mean(human continuations), \hape fitting split \\
+\ailr & logistic-regression probe weights on the same data \\
+\writechat & the instruct model's own response activations $-$ the matched human reference teacher-forced in the same assistant slot (455 fit prompts) \\
+\writeraw & own raw continuation $-$ true human continuation after the same prefix \\
+\chatreg & Llama-3-8B/70B-Instruct texts $-$ Llama-3-8B/70B base texts (\hape) \\
+\aibase & base-LLM texts $-$ human texts \\
+\aihc, \dir{ai\_raid} & the \airead contrast fitted on \hcthree / \raid chat generators \\
+\formality & formal $-$ informal sentences of \citet{pavlick2016formality}, top vs.\ bottom quintile (900 + 900) \\
+\fluency & low-NLL $-$ high-NLL terciles of human texts (NLL under the reading model) \\
+\lengthdir & 256-token pooling $-$ 48-token pooling of the same human texts \\
+\asstaxis & default-assistant responses $-$ mean of 40 role-play personas (roles and questions from the Assistant Axis repository; 8 questions per role; no judge filtering) \\
+\dir{random0/1} & fixed Gaussian directions \\
+\perpall & \airead with the span of formality, fluency, length, chat register, assistant axis and the 5-D genre subspace projected out \\
+\perppersona & \airead with chat register and assistant axis projected out \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\para{Prompt baselines.}
+The ``human'' system prompt reads: ``Write like a human, not like an AI. Your text must read as if a real person wrote it: natural and unpolished where appropriate, with none of the phrasing, structure or tone typical of AI assistants.''
+The counterpart asks for ``unmistakable AI assistant style''.
+
+\para{Layer and coefficient selection.}
+We compared layers 8, 12, 16 and 20 on the 89 dev prompts using \desklib, external NLL and distinct-3, and chose layer 12 and the coefficient grid $\{0.25, 0.5, 0.75, 1.0\}$ there.
+
+\para{Implementation.}
+Python 3.12.8, torch 2.6.0 and transformers. The seed for data splits is 42, and generation seeds are fixed per batch.
+Generation uses batches of 50--104 and activation extraction batches of 32--48.
+Activation extraction takes about 20 minutes per model, the main steering run about 2 hours 10 minutes, and scoring about 50 minutes.
+
+\para{Judge.}
+The judge is \texttt{openai/gpt-5.6-terra} via OpenRouter at temperature 0, blind to condition.
+About 3\% of calls hit its content filter and were scored by \texttt{anthropic/claude-sonnet-5} instead.
+The run made about 20{,}100 unique judge calls (about 11.2M input and 1.2M output tokens).
+The API key reached its daily spending limit near the end of the run; the only analysis affected is the judge half of the truncation control.
+
+\para{Deviations from the plan.}
+We dropped a third random direction and a formality-only residualised direction for time.
+We tightened the matched-coherence rule to require the on-task score to be within 10 points as well.
+A logit-lens reading of the layer-12 directions returned uninterpretable tokens and is not used.

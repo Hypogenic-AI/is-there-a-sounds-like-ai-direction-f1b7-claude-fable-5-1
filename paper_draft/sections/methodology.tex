@@ -1,0 +1,94 @@
+\section{Method}
+\label{sec:method}
+
+We decompose the question into four hypotheses, fixed before the experiments.
+{\bf H1 (readout):} a difference-of-means direction from matched pairs separates held-out human and AI text across genres, generators and datasets.
+{\bf H2 (causal):} steering toward the human side lowers independent-detector AI scores more than equal-norm random and confound directions at matched coherence, and the reverse raises them.
+{\bf H3 (distinct):} the direction is not formality, fluency, length, genre, chat register, or the assistant axis.
+{\bf H4 (base vs.\ instruct):} the direction exists in the base model, and chat tuning moves the model's own writing along it.
+
+\subsection{Models and data}
+
+We study \llamai and its base model \llamab in bf16 on one NVIDIA RTX A6000.
+We choose this pair because it matches the extractor family of \citet{quaremba2026linear} and the base/instruct pair of \citet{xu2026base}, and because \hape contains texts from the Llama-3 base and instruct models.
+
+\para{Fitting and readout.}
+We fit the main direction on \hape \citep{reinhart2024hape}, in which a human continuation and LLM continuations follow the same 500-word prefix, so topic, genre and length are matched.
+We use 200 documents in each of 6 genres for fitting and 100 per genre for held-out readout, with the human text, four chat generators (GPT-4o, GPT-4o-mini, Llama-3-8B/70B-Instruct) and two base generators (Llama-3-8B/70B).
+For transfer we use \hcthree (676 pairs), \raid without attacks (480 human and 5{,}233 generated texts from 11 generators in 8 domains), and the \mage test set (800 + 800).
+
+\para{Generation prompts.}
+The test set has 208 prompts: 84 \hape continuation prompts, 69 \hcthree questions and 55 \raid writing prompts, each with a matched human reference.
+A disjoint set of 89 dev prompts serves for tuning and 455 fit prompts for fitting directions on the model's own writing.
+For raw continuation without a chat template we use 180 fit and 150 test \hape prefixes.
+
+\para{Activations.}
+We read every text as \bos + text, truncated to 256 tokens so that length is equalised, and mean-pool the residual stream over text tokens at the output of every block.
+
+\subsection{Directions}
+
+All directions are unit vectors at layer 12 of 32.
+The primary direction is
+\begin{equation}
+\hat{\vu}_{\text{\airead}} \;\propto\; \E_{x \in \text{chat-model texts}}\big[\bar{\vh}(x)\big] \;-\; \E_{x \in \text{human continuations}}\big[\bar{\vh}(x)\big],
+\end{equation}
+where $\bar{\vh}(x)$ is the mean-pooled activation of text $x$ on the \hape fitting split.
+We compare it with three kinds of direction, summarised here and defined in full in \tabref{tab:directions} (appendix).
+
+\begin{itemize}[leftmargin=*,itemsep=0pt,topsep=0pt]
+    \item {\bf Other AI directions.} \ailr: logistic-regression probe weights on the same data. \writechat: the instruct model's own response activations minus the matched human reference teacher-forced in the same assistant slot. \writeraw: own raw continuation minus the true human continuation. \aibase: base-LLM texts minus human texts. \aihc and \dir{ai\_raid}: the same contrast fitted on other datasets.
+    \item {\bf Candidate explanations.} \chatreg: Llama-3-8B/70B-Instruct texts minus Llama-3-8B/70B base texts in \hape. \formality: formal minus informal sentences \citep{pavlick2016formality}. \fluency: low minus high negative log-likelihood (NLL) terciles of human texts. \lengthdir: 256-token minus 48-token pooling of the same texts. \asstaxis: default-assistant responses minus the mean of 40 role-play personas, a reduced version of the pipeline of \citet{lu2026assistant}. A 5-D genre subspace.
+    \item {\bf Controls.} Two fixed Gaussian \randdir directions; \perpall, which is \airead with the span of all candidate explanations projected out; and \perppersona, with only chat register and the assistant axis projected out.
+\end{itemize}
+
+\subsection{Interventions}
+
+\para{Addition.} At layer 12 and every position we set
+\begin{equation}
+\vh \;\leftarrow\; \vh + c \cdot \overline{\|\vh\|} \cdot \hat{\vu},
+\end{equation}
+where $\overline{\|\vh\|} = 4.0$ is the mean residual norm at that layer.
+The mean gap between human and AI text along \airead is 1.30, so $c = 0.33$ is one natural gap.
+Every direction is applied at the same absolute norm for a given $c$; negative $c$ steers toward the human side.
+
+\para{Ablation.} We project $\hat{\vu}$ out of the output of every block \citep{arditi2024refusal}.
+
+\para{Prompt baselines.} A system prompt that asks the model to ``write like a human, not like an AI'', and a counterpart that asks for ``unmistakable AI assistant style'' (full text in \secref{app:details}).
+
+\para{Decoding and tuning.} We sample at temperature 0.7 and top-$p$ 0.95 for 200 new tokens with the same seeds across conditions.
+We chose layer 12 and the coefficient grid $\{0.25, 0.5, 0.75, 1.0\}$ on the 89 dev prompts; test prompts were not used for any choice.
+The main run has 64 conditions on 208 prompts.
+
+\subsection{Measures}
+
+None of our measures uses Llama activations.
+We validate each one by how well it separates the unsteered output from the matched human references on the test prompts (\tabref{tab:detectors}).
+
+\begin{table}[t]
+\centering
+\caption{Independent measures of AI-likeness and their validation on the 208 test prompts (unsteered output vs.\ matched human references). All pass the pre-specified AUROC $>0.8$ rule; our conclusions rest on the first three.}
+\label{tab:detectors}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}llcc@{}}
+\toprule
+Measure & Description & AUROC & TPR@5\%FPR \\
+\midrule
+LLM judge (0--100) & \texttt{gpt-5.6-terra}, temperature 0, blind to condition; also rates coherence and on-task & 0.991 & 0.986 \\
+\desklib & \texttt{desklib/ai-text-detector-v1.01}, supervised DeBERTa-v3-large & {\bf 0.998} & {\bf 0.995} \\
+\bino-style & log-PPL / cross-PPL with Qwen2.5-7B and Qwen2.5-7B-Instruct \citep{hans2024binoculars} & 0.933 & 0.827 \\
+\hcthree RoBERTa & \texttt{Hello-SimpleAI/chatgpt-detector-roberta} \citep{guo2023hc3} & 0.939 & 0.740 \\
+\radar & \texttt{TrustSafeAI/RADAR-Vicuna-7B} \citep{hu2023radar} & 0.858 & 0.216 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+A text is {\em flagged} if it scores above the threshold that gives 5\% false positives on the human references of the same prompts.
+\radar is weak (TPR 0.22), and the \hcthree RoBERTa response turned out to be a length artifact (\secref{sec:causal}), so we rest our conclusions on the judge, \desklib and \bino.
+
+\para{Quality and content.} We report judge coherence and on-task scores (0--100), mean token NLL under Qwen2.5-7B, distinct-3, a formality classifier score, and the cosine between sentence embeddings of the steered and unsteered output for the same prompt (``sim'').
+We also report {\em readback}: the generated text re-read by the unsteered model and projected on \airead, in units of the standard deviation (SD) of human text. Readback is a closed-loop check, not an independent detector.
+
+\para{Matched coherence.} For each direction we take the largest $|c|$ whose mean judge coherence and on-task score are both within 10 points of unsteered.
+
+\para{Statistics.} All comparisons are paired over prompts.
+We report 95\% bootstrap confidence intervals (2{,}000 resamples) on per-prompt differences, and Wilcoxon signed-rank tests of each steered condition against the mean of the equal-norm random controls at the same signed coefficient, Holm-corrected within each metric across all conditions.

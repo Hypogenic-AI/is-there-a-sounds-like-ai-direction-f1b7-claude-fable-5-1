@@ -1,0 +1,37 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\para{What ``sounding like AI'' is in this model.}
+The direction that the probe literature reads as machine authorship is, in \llamai, the difference between how chat-tuned models write and how base models and humans write: longer words, nominalisations, participial and prepositional phrases, and few contractions.
+It is not ``written by a model'', because base-model text barely moves along it.
+It is not ``being the Assistant'', because the persona proxy is orthogonal to it and steering along the proxy leaves AI-likeness unchanged.
+And it is not created by chat tuning: the base model already has it, and chat tuning together with the chat template sets where the model's own writing sits on it.
+
+\para{Implications for detection.}
+Activation-probe detectors of the kind in the literature are, in this model, detectors of chat-model register.
+This explains both their strong transfer across chat generators and their weakness on non-chat generators, which \citet{vishnyakov2026svdetect} observed on \raid, and it gives a geometric reading of the behavioural result of \citet{xu2026base}.
+It also means the same vector is a style control and not an authorship variable.
+As an evasion tool it is poor: at preserved coherence the best supervised detector still flags 85\% of texts and the perplexity-based detector flags more, not fewer.
+
+\para{The \bino reversal.}
+We have no tested explanation.
+Three observations bear on it: steering toward the human side raises external NLL only slightly while lowering lexical diversity; steering toward the AI side lowers the \bino flag rate with NLL unchanged; and the one direction that lowers \bino (\aibase) is the one that raises NLL most.
+These are consistent with \bino tracking predictability and not register, which would make register and predictability two separate axes of ``AI-likeness''.
+The experiments that would show this, such as steering both directions jointly or scoring with the original Falcon pair, were not run.
+
+\para{Surprises.}
+Removing the chat-register component leaves a vector that still reads back as slightly less AI (3.65 SD) but has no detector or judge effect.
+Base-model continuations at temperature 0.7 are heavily flagged by perplexity-based and supervised detectors.
+And steering toward AI raises judged coherence in the base model.
+
+\para{Limitations.}
+{\em Scope.} We study one model family, steer at one layer chosen on dev prompts, and use one sampling seed per condition (seed-to-seed differences of the unsteered condition are at most 0.7 judge points and 0.01 on \desklib).
+{\em The judge may share the confound.} An LLM judge asked for AI-likelihood may itself key on chat register. Its agreement with \desklib (Spearman 0.56 over all generated texts) and its AUROC of 0.99 on human vs.\ model text argue that it measures something real, but the headline effect is largest on the measure most likely to be register-sensitive. About 3\% of judge calls hit the primary model's content filter and were scored by a second model, and one main-run item has no judge score.
+{\em \bino is non-standard.} We use a Qwen2.5-7B pair, not the Falcon pair of \citet{hans2024binoculars}. It validates at AUROC 0.93 on our prompts, but the reversal should be checked with the original models and with a commercial detector; none was accessible.
+{\em Incomplete truncation control.} The judge half of the length control covers 72 of 208 prompts (all 208 for \desklib).
+{\em Assistant-axis proxy.} We use 40 roles with 8 questions each and no judge filtering, not the 275-role pipeline of \citet{lu2026assistant}; a null for the proxy is weaker than a null for the real axis.
+{\em Shared generators.} The 0.96 cosine with chat register is inflated by shared Llama-instruct texts; the disjoint-data value is 0.88--0.89.
+{\em References.} Human references are not length-matched to generations (175 vs.\ 140 words on average), and \hcthree human answers carry tokenisation artifacts, so the detector validation AUROCs are optimistic.
+{\em Intervention design.} We tested only mean-pooled directions added at all positions, and ran the second-tier directions (\ailr, \fluency, \lengthdir, \perppersona, \aibase, \aihc) at two coefficients only.
+{\em Statistics.} Holm correction applies within each metric across the conditions of a run; the descriptive comparisons elsewhere are uncorrected.
+\Secref{app:details} lists deviations from the pre-specified plan.

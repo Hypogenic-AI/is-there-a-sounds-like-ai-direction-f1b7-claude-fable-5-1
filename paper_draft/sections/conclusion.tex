@@ -1,0 +1,12 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+\llamai has a linear direction that makes its output read as more or less AI-written, and the direction is causal in both the instruct and the base model.
+It is not an authorship variable and not the assistant persona.
+It is the prose register of chat-tuned models, already present in the base model, onto which chat tuning moves the model's default writing.
+Moving along it changes an LLM judge's impression substantially (92.4 to 70.6 at matched coherence) and a supervised detector slightly (99.5\% to 85\% flagged), and does not make the text statistically human-like to a perplexity-based detector.
+
+Several follow-ups would sharpen this picture.
+The first is to test the two-axis reading directly by steering \airead and \aibase jointly and checking whether judge, supervised and perplexity-based detectors all move at preserved coherence.
+The second is to rerun the base-model baseline at temperature 1.0 and score it with the original \bino pair and a commercial detector, to resolve the disagreement with \citet{xu2026base}.
+Beyond these, the result needs replication on a second model family and with the real Assistant Axis, human raters to check the judge, and a sparse-autoencoder decomposition to see whether the direction is one feature or the sum of the verbosity, hedging and complexity features that \citet{kuznetsov2025sae} list.
